@@ -1,1 +1,80 @@
-/* You can add global styles to this file, and also import other style files */
+// /* You can add global styles to this file, and also import other style files */
+// @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+// @import 'style/utils/variables';
+// @import 'style/utils/filters';
+// @import 'style/utils/extends';
+// @import 'style/utils/functions';
+// @import 'style/utils/media-queries';
+// @import 'style/utils/mixins';
+// @import 'style/utils/angled-edges';
+
+// *
+// {
+// 	padding: 0;
+// 	margin: 0;
+
+// 	&,
+// 	&::before,
+// 	&::after {
+// 		box-sizing: inherit;
+// 	}
+// }
+
+// html
+// {
+// 	font-size: $fontSize-root;
+// 	text-size-adjust: 100%;
+
+// 	-ms-overflow-style: scrollbar;
+// 	-webkit-tap-highlight-color: transparent;
+// 	-webkit-overflow-scrolling: touch;
+// 	box-sizing: border-box;
+// }
+
+// body
+// {
+// 	line-height: 1.6;
+// 	font:
+// 	{
+// 		size: rem-calc($fontSize-base);
+// 		family: -apple-system, BlinkMacSystemFont, $fontFamily-base;
+// 		weight: 400;
+// 	};
+// 	color: #777;
+// 	background-color: #fff;
+// }
+
+// ul, ol
+// {
+// 	list-style: none;
+// 	list-style-image: none;
+// 	margin: 0;
+// }
+
+// // Required
+// @import "style/vendors/bootstrap-4/functions";
+// @import "style/vendors/bootstrap-4/variables";
+// @import "style/vendors/bootstrap-4/mixins";
+// // Optional
+// @import "style/vendors/bootstrap-4/grid";
+// @import "style/vendors/bootstrap-4/utilities/display";
+// @import "style/vendors/bootstrap-4/utilities/flex";
+// @import "style/vendors/bootstrap-4/images";
+
+// @import url(style/vendors/normalize.css);
+// @import url(fonts/fontello/css/fontello.css);
+
+// @import 'style/vendors-extensions/fontello';
+
+// @import 'style/base/typography';
+
+// @import 'style/layout/header';
+// @import 'style/layout/start-screen';
+// @import 'style/layout/hero';
+
+// @import 'style/components/buttons';
+// @import 'style/components/site_logo';
+// @import 'style/components/social_btns';
+
+
