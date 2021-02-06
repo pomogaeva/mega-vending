@@ -1,0 +1,148 @@
+<div id="hero" class="hero jarallax" data-speed="0.6" data-img-position="50% 50%"
+  style="background-image: url(img/hero_img/2.jpg);background-color: #f18226">
+
+  <div class="hero__inner">
+    <div class="container">
+      <div class="row">
+        <div class="col-11 col-sm-12">
+          <h4 class="hero__subtitle">VendGo</h4>
+          <h1 class="hero__title">Shop Catalog</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main role="main">
+
+  <!-- start section -->
+  <section class="section section--gray-bg">
+    <div class="container">
+      <!-- start goods catalog -->
+      <div class="goods-catalog">
+        <div class="row">
+          <div class="col-12 col-md-4 col-lg-3">
+
+            <div class="__bg"></div>
+
+            <!-- start sidebar -->
+            <aside class="sidebar goods-filter">
+              <span class="goods-filter-btn-close js-toggle-filter"><i class="fontello-cancel"></i></span>
+
+              <div class="goods-filter__inner">
+                <form action="#">
+                  <!-- start widget -->
+                  <div class="widget widget--categories">
+                    <h4 class="widget-title">Category</h4>
+
+                    <ul class="list">
+                      <li class="list__item">
+                        <a class="list__item__link" href="#">Combo Machine</a>
+                      </li>
+
+                      <li class="list__item">
+                        <a class="list__item__link" href="#">Coffe Machine</a>
+                      </li>
+
+                      <li class="list__item">
+                        <a class="list__item__link" href="#">Snack Machine</a>
+                      </li>
+
+                      <li class="list__item">
+                        <a class="list__item__link" href="#">Healthy Snacks</a>
+                      </li>
+
+                      <li class="list__item">
+                        <a class="list__item__link" href="#">Eco Vending</a>
+                      </li>
+
+                      <li class="list__item">
+                        <a class="list__item__link" href="#">Ingredients</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- end widget -->
+
+                  <!-- start widget -->
+                  <div class="widget widget--price">
+                    <h4 class="widget-title">Price</h4>
+
+                    <div>
+                      <input type="text" class="js-range-slider" name="my_range" value="" data-type="double"
+                        data-min="0" data-max="1000" data-from="200" data-to="600" data-grid="true" data-skin="round"
+                        data-prefix="$" data-hide-min-max="true" />
+
+                      <input class="range-slider-min-value" type="hidden" name="min-value">
+                      <input class="range-slider-max-value" type="hidden" name="max-value">
+                    </div>
+                  </div>
+                  <!-- end widget -->
+
+                  <div class="spacer py-5 py-lg-6"></div>
+
+                </form>
+              </div>
+            </aside>
+            <!-- end sidebar -->
+
+          </div>
+
+          <div class="col-12 col-md-8 col-lg-9">
+
+            <div class="spacer py-3"></div>
+
+            <!-- start goods -->
+            <div class="goods">
+              <div class="__inner">
+                <div class="row" *ngIf="productList">
+                  <!-- <app-all-products *ngFor="let product of productsList" [product]="product"></app-all-products> -->
+                  <!-- | filterProduct: category | filterPrices: price -->
+                  <div class="col-12 col-sm-6 col-lg-4" *ngFor="let product of productList">
+                    <div class="__item">
+                      <figure class="__image __image--shadow __image--bg-white">
+                        <img class="lazy" [src]="product.image" alt="{{product.name}} photo" />
+
+                        <div class="__btn">
+                          <a class="custom-btn custom-btn--medium custom-btn--s3 wide" [routerLink]="product.id">More
+                            Info</a>
+                        </div>
+                      </figure>
+
+                      <div class="__content">
+                        <div class="product-price">
+                          <span class="product-price__item product-price__item--new">{{product.price_discount}}$</span>
+                          <span class="product-price__item product-price__item--old">{{product.price}}$</span>
+                        </div>
+
+                        <h4 class="__title"><a [routerLink]="product.id">{{product.name}}</a></h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end goods -->
+
+            <div class="spacer py-5 py-lg-7"></div>
+
+            <!-- start pagination -->
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center justify-content-sm-end">
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+              </ul>
+            </nav>
+            <!-- end pagination -->
+
+          </div>
+        </div>
+      </div>
+      <!-- end goods catalog -->
+    </div>
+  </section>
+  <!-- end section -->
+</main>
+<!-- end main -->

@@ -28,10 +28,9 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets/",
-              "src/fonts/",
-              "src/img/",
-              "src/libs/"
+              "src/assets",
+              "src/fonts",
+              "src/img"
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -39,6 +38,17 @@
               "src/css/style.min.css"
             ],
             "scripts": [
+              "src/js/lib/device.js",
+              "src/js/lib/jquery-2.2.4.js",
+              "src/libs/aos/aos.js",
+              "src/libs/fancybox/jquery.fancybox.min.js",
+              "src/libs/ion.rangeSlider/js/ion.rangeSlider.min.js",
+              "src/libs/isotope/isotope.pkgd.min.js",
+              "src/libs/jarallax/jarallax-element.min.js",
+              "src/libs/jarallax/jarallax-video.min.js",
+              "src/libs/jarallax/jarallax.min.js",
+              "src/libs/nice-select/jquery.nice-select.min.js",
+              "src/libs/slick/slick.min.js",
               "src/js/main.js"
             ]
           },
