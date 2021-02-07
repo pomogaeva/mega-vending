@@ -1,4 +1,4 @@
-<footer class="footer footer--s2">
+<!-- <footer class="footer footer--s2">
   <div class="container">
     <div class="footer__line footer__line--first">
       <div class="row">
@@ -26,6 +26,58 @@
           </div>
 
           <div class="footer__item">
+            <div class="s-btns s-btns--white">
+              <ul class="d-flex flex-row flex-wrap align-items-center">
+                <li><a class="f" href="https://www.facebook.com/Megavendinglb/"><i class="fontello-facebook"></i></a>
+                </li>
+                <li><a class="t" href="https://www.linkedin.com/in/megavending/"><i class="fontello-linkedin"></i></a>
+                </li>
+                <li><a class="y" href="https://www.youtube.com/channel/UCqOoJn4-qmIqH266snq2z9A"><i
+                      class="fontello-youtube-play"></i></a></li>
+                <li><a class="i" href="https://www.instagram.com/megavendingsarl/"><i
+                      class="fontello-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-8 col-lg-5 offset-xl-1">
+          <div class="row">
+
+            <div class="col-auto col-md-6">
+              <div class="footer__item">
+                <nav class="footer__navigation">
+                  <ul>
+                    <li><a href="#">Snack Vending Machines</a></li>
+                    <li><a href="#">Beverage Vending Machines</a></li>
+                    <li><a href="#">Combo Vending Machines</a></li>
+                    <li><a href="#">Coffee Machines</a></li>
+                    <li><a href="#">ATMs Machines</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> -->
+
+<footer class="footer footer--s1">
+  <div class="container">
+    <div class="footer__line footer__line--first">
+      <div class="row">
+        <div class="col-12 col-md-5 col-lg-4 col-xl-4">
+          <div class="footer__item">
+            <address class="footer__address">
+              <p>5272 Lyngate Ct Burke, VA 2015-1688</p>
+              <p> +961 766 00 392</p>
+              <p><a href="mailto:info@vendgo.co">info@vendgo.co</a></p>
+            </address>
+          </div>
+
+          <div class="footer__item">
             <!-- start social buttons -->
             <div class="s-btns s-btns--white">
               <ul class="d-flex flex-row flex-wrap align-items-center">
@@ -43,23 +95,69 @@
           </div>
         </div>
 
-        <div class="col-12 col-md-8 col-lg-5 offset-xl-1">
-          <div class="row">
-
-            <div class="col-auto col-md-6">
+        <div class="col-12 col-md-4 col-lg-5 col-xl-5">
+          <div class="row justify-content-sm-between justify-content-xl-start">
+            <div class="col-auto col-lg-5">
               <div class="footer__item">
                 <nav class="footer__navigation">
                   <ul>
-                    <!-- li class="active" -->
-                    <li><a href="#">Snack Vending Machines</a></li>
-                    <li><a href="#">Beverage Vending Machines</a></li>
-                    <li><a href="#">Combo Vending Machines</a></li>
-                    <li><a href="#">Coffee Machines</a></li>
-                    <li><a href="#">ATMs Machines</a></li>
+                    <li routerLinkActive="active"><a routerLink="home">Home</a></li>
+                    <li routerLinkActive="active"><a routerLink="about">About Us</a></li>
+                    <li routerLinkActive="active"><a routerLink="products">Products</a></li>
+                    <li routerLinkActive="active"><a routerLink="contacts">Contacts</a></li>
                   </ul>
                 </nav>
               </div>
             </div>
+
+            <div class="col-auto">
+              <div class="footer__item">
+                <nav class="footer__navigation">
+                  <ul>
+                    <li routerLinkActive="active"><a href="#">Snack Vending Machines</a></li>
+                    <li routerLinkActive="active"><a href="#">Beverage Vending Machines</a></li>
+                    <li routerLinkActive="active"><a href="#">Combo Vending Machines</a></li>
+                    <li routerLinkActive="active"><a href="#">Coffee Machines</a></li>
+                    <li routerLinkActive="active"><a href="#">ATMs Machines</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3 col-xl-3">
+          <div class="footer__item">
+            <form class="footer__form-subscribe" action="#">
+              <div class="input-wrp">
+                <i class="fontello-envelope"></i>
+                <input class="textfield" type="text" value="" placeholder="Email" inputmode="email"
+                  x-inputmode="email" />
+              </div>
+
+              <button class="custom-btn custom-btn--big custom-btn--s2 wide" type="submit"
+                role="button">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__line footer__line--second">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-auto">
+          <div class="footer__item">
+            <a class="footer__logo site-logo" routerLink="home">
+              <img src="img/img/site_logo/logo_2.svg" width="155" height="40" alt="demo" />
+            </a>
+          </div>
+        </div>
+
+        <div class="col-auto">
+          <div class="footer__item">
+            <p class="__copy">
+              Copyright © 2019 VendGo
+            </p>
           </div>
         </div>
       </div>
