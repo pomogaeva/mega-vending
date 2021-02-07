@@ -34,8 +34,11 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/slick-carousel/slick/slick.scss",
+              "node_modules/slick-carousel/slick/slick-theme.scss",
               "src/css/critical.min.css",
-              "src/css/style.min.css"
+              "src/css/style.min.css",
+              "src/styles.scss"
             ],
             "scripts": [
               "src/js/lib/device.js",
@@ -49,6 +52,8 @@
               "src/libs/jarallax/jarallax.min.js",
               "src/libs/nice-select/jquery.nice-select.min.js",
               "src/libs/slick/slick.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js",
               "src/js/main.js"
             ]
           },
@@ -110,16 +115,29 @@
               "src/favicon.ico",
               "src/assets",
               "src/fonts",
-              "src/img",
-              "src/libs"
+              "src/img"
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/slick-carousel/slick/slick.scss",
+              "node_modules/slick-carousel/slick/slick-theme.scss",
               "src/css/critical.min.css",
-              "src/css/style.min.css",
-              "src/styles.scss"
+              "src/css/style.min.css"
             ],
             "scripts": [
+              "src/js/lib/device.js",
+              "src/js/lib/jquery-2.2.4.js",
+              "src/libs/aos/aos.js",
+              "src/libs/fancybox/jquery.fancybox.min.js",
+              "src/libs/ion.rangeSlider/js/ion.rangeSlider.min.js",
+              "src/libs/isotope/isotope.pkgd.min.js",
+              "src/libs/jarallax/jarallax-element.min.js",
+              "src/libs/jarallax/jarallax-video.min.js",
+              "src/libs/jarallax/jarallax.min.js",
+              "src/libs/nice-select/jquery.nice-select.min.js",
+              "src/libs/slick/slick.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js",
               "src/js/main.js"
             ]
           }

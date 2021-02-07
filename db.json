@@ -90,5 +90,25 @@
       "weight": 10,
       "electrical": "14"
     }
+  ],
+  "home_slides": [
+    {
+      "id": 1,
+      "heading": "Vending Products in all Offices and Hubs",
+      "subHeading": "Flagfin Atlantic saury, stonecat beachsalmon, silver dollar South American Lungfish. Reef triggerfish dogteeth tetra barreleye springfish chubsucker Pacific hake sea devil New",
+      "image": "img/start-screen_img/2/1.jpg"
+    },
+    {
+      "id": 2,
+      "heading": "Vending Technology in new Business Era",
+      "subHeading": "",
+      "image": "img/start-screen_img/1/1.jpg"
+    },
+    {
+      "id": 3,
+      "heading": "Vending Products in Offices and Hubs",
+      "subHeading": "",
+      "image": "img/start-screen_img/3/1.jpg"
+    }
   ]
 }
