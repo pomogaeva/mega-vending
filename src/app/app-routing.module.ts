@@ -14,10 +14,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
 
   {
-    path: 'products', component: ProductsComponent
-    , children: [
-      { path: '', redirectTo: 'all-products', pathMatch: 'full', },
-      { path: 'all-products', component: ProductsComponent },
+    path: 'products', component: ProductsComponent, children: [
       { path: 'products/:productId', component: SingleProductComponent }
     ]
   },

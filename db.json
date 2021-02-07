@@ -29,6 +29,66 @@
       "depth": 6,
       "weight": 10,
       "electrical": "14"
+    },
+    {
+      "id": 3,
+      "name": "Coffee Machine 10",
+      "category": "Coffee machine",
+      "image": "https://demo.artureanec.com/html/vendgo/img/product-single__img/2.png",
+      "description": "I'm a short desc",
+      "price": 1000,
+      "price_discount": 800,
+      "specification": "I am a long desc",
+      "height": 10,
+      "width": 5,
+      "depth": 6,
+      "weight": 10,
+      "electrical": "14"
+    },
+    {
+      "id": 4,
+      "name": "Coffee Machine 10",
+      "category": "Coffee machine",
+      "image": "https://demo.artureanec.com/html/vendgo/img/product-single__img/2.png",
+      "description": "I'm a short desc",
+      "price": 1000,
+      "price_discount": 800,
+      "specification": "I am a long desc",
+      "height": 10,
+      "width": 5,
+      "depth": 6,
+      "weight": 10,
+      "electrical": "14"
+    },
+    {
+      "id": 5,
+      "name": "Coffee Machine 10",
+      "category": "Coffee machine",
+      "image": "https://demo.artureanec.com/html/vendgo/img/product-single__img/2.png",
+      "description": "I'm a short desc",
+      "price": 1000,
+      "price_discount": 800,
+      "specification": "I am a long desc",
+      "height": 10,
+      "width": 5,
+      "depth": 6,
+      "weight": 10,
+      "electrical": "14"
+    },
+    {
+      "id": 6,
+      "name": "Coffee Machine 10",
+      "category": "Coffee machine",
+      "image": "https://demo.artureanec.com/html/vendgo/img/product-single__img/2.png",
+      "description": "I'm a short desc",
+      "price": 1000,
+      "price_discount": 800,
+      "specification": "I am a long desc",
+      "height": 10,
+      "width": 5,
+      "depth": 6,
+      "weight": 10,
+      "electrical": "14"
     }
   ]
 }
