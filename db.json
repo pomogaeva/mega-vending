@@ -173,6 +173,28 @@
       "subject": "Verification - address",
       "message": null,
       "id": 4
+    },
+    {
+      "email": "the",
+      "id": 5
+    },
+    {
+      "email": "t.pomogaeva@gmail.com",
+      "id": 6
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": 1,
+      "email": "test@gmail.com"
+    },
+    {
+      "email": "cfgvjhkjlk",
+      "id": 2
+    },
+    {
+      "email": "test@gmail.com",
+      "id": 3
     }
   ]
 }

@@ -166,8 +166,8 @@
 
               <div class="col-12 col-md-6">
                 <div class="input-wrp">
-                  <input class="textfield" placeholder="Email *" name="email" type="email" formControlName="email"
-                    [ngClass]="{
+                  <input class="textfield" placeholder="Email *" ngModel [email]="true" name="email" type="email"
+                    formControlName="email" [ngClass]="{
                     'is-valid': emailControl.valid && isSubmit,
                     'is-invalid': emailControl.invalid}" />
                   <div class="invalid-feedback" *ngIf="emailControl.errors && emailControl.touched">

@@ -17,7 +17,6 @@ export class SingleProductComponent implements OnInit {
     private productService: ProductService) { }
 
   ngOnInit(): void {
-    console.log('Heyyyyyyy single')
     this.route.params.subscribe(params => this.getProductInfo(params.productId));
   }
 
@@ -26,15 +25,3 @@ export class SingleProductComponent implements OnInit {
   }
 
 }
-
-
-  // @Input() product: Product;
-
-  // constructor(
-  //   private productService: ProductService
-  // ) {
-  // }
-
-  // ngOnInit(): void {
-  // this.route.params.subscribe(params => this.getProductData(params.productId));
-  // }
