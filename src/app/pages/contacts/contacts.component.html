@@ -148,40 +148,63 @@
 
           <div class="spacer py-6"></div>
 
-          <form class="js-contact-form" action="#">
+          <form class="js-contact-form" (ngSubmit)="onSubmit()" [formGroup]="newRequestForm">
             <div class="row">
               <div class="col-12 col-md-6">
                 <div class="input-wrp">
-                  <input class="textfield" placeholder="Full name *" name="name" type="text" />
+                  <input class="textfield" placeholder="Full name *" name="name" type="text" formControlName="fullName"
+                    [ngClass]="{
+                    'is-valid': fullNameControl.valid && isSubmit,
+                    'is-invalid': fullNameControl.invalid}" />
+                  <div class="invalid-feedback" *ngIf="fullNameControl.errors && fullNameControl.touched">
+                    <span *ngIf="fullNameControl.errors.required">
+                      Please enter your name.
+                    </span>
+                  </div>
                 </div>
               </div>
 
               <div class="col-12 col-md-6">
                 <div class="input-wrp">
-                  <input class="textfield" placeholder="Email *" name="email" type="text" inputmode="email"
-                    x-inputmode="email" />
+                  <input class="textfield" placeholder="Email *" name="email" type="email" formControlName="email"
+                    [ngClass]="{
+                    'is-valid': emailControl.valid && isSubmit,
+                    'is-invalid': emailControl.invalid}" />
+                  <div class="invalid-feedback" *ngIf="emailControl.errors && emailControl.touched">
+                    <span *ngIf="emailControl.invalid">
+                      Please enter a valid email.
+                    </span>
+                  </div>
                 </div>
               </div>
 
               <div class="col-12 col-md-6">
                 <div class="input-wrp">
-                  <input class="textfield" placeholder="Phone" name="phone" type="text" inputmode="tel"
-                    x-inputmode="tel" />
+                  <input class="textfield" placeholder="Phone" name="phone" type="tel" formControlName="phone" />
                 </div>
               </div>
 
               <div class="col-12 col-md-6">
                 <div class="input-wrp">
-                  <input class="textfield" placeholder="Subject *" name="subject" type="text" />
+                  <input class="textfield" placeholder="Subject *" name="subject" type="text" formControlName="subject"
+                    [ngClass]="{
+                  'is-valid': subjectControl.valid && isSubmit,
+                  'is-invalid': subjectControl.invalid}" />
+                  <div class="invalid-feedback" *ngIf="subjectControl.errors && subjectControl.touched">
+                    <span *ngIf="subjectControl.errors.required">
+                      Subject is a mandatory field.
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
 
             <label class="input-wrp">
-              <textarea class="textfield" placeholder="Message" name="message"></textarea>
+              <textarea class="textfield" placeholder="Message" name="message" formControlName="message"></textarea>
             </label>
 
-            <button class="custom-btn custom-btn--big custom-btn--s3" type="submit" role="button">Send Message</button>
+            <button class="custom-btn custom-btn--big custom-btn--s3" type="submit" role="button">Send
+              Message</button>
 
             <div class="form__note"></div>
           </form>

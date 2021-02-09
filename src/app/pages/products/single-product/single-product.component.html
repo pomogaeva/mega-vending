@@ -58,8 +58,8 @@
                 </ul> -->
 
                   <div class="product-price">
-                    <span class="product-price__item product-price__item--old">$ {{product.price}}</span>
-                    <span class="product-price__item product-price__item--new">$ {{product.price_discount}}</span>
+                    <span class="product-price__item product-price__item--old">${{product.price}}</span>
+                    <span class="product-price__item product-price__item--new">${{product.price_discount}}</span>
                   </div>
 
                 </div>
@@ -91,29 +91,22 @@
 
                             <div class="info-table info-table--s1">
                               <table>
-                                <thead>
-                                  <tr>
-                                    <td></td>
-                                    <td>4-wide</td>
-                                  </tr>
-                                </thead>
-
                                 <tbody>
                                   <tr>
                                     <td>Height</td>
-                                    <td>{{product.height}}″</td>
+                                    <td>{{product.height}}cm</td>
                                   </tr>
                                   <tr>
                                     <td>Width</td>
-                                    <td>{{product.width}}″</td>
+                                    <td>{{product.width}}cm</td>
                                   </tr>
                                   <tr>
                                     <td>Depth</td>
-                                    <td>{{product.depth}}″</td>
+                                    <td>{{product.depth}}cm</td>
                                   </tr>
                                   <tr>
                                     <td>Weight</td>
-                                    <td>{{product.weight}} lbs.</td>
+                                    <td>{{product.weight}}kg</td>
                                   </tr>
                                   <tr>
                                     <td>Electrical</td>
