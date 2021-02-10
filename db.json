@@ -7,7 +7,6 @@
       "image": "https://demo.artureanec.com/html/vendgo/img/product-single__img/1.png",
       "description": "I'm a short desc",
       "price": 1000,
-      "price_discount": 800,
       "specification": "I am a long desc",
       "height": 10,
       "width": 5,
@@ -22,7 +21,6 @@
       "image": "https://demo.artureanec.com/html/vendgo/img/product-single__img/2.png",
       "description": "I'm a short desc",
       "price": 1000,
-      "price_discount": 800,
       "specification": "I am a long desc",
       "height": 10,
       "width": 5,
@@ -32,12 +30,11 @@
     },
     {
       "id": 3,
-      "name": "Coffee Machine 10",
+      "name": "Snack Machine 10",
       "category": "Coffee machine",
       "image": "https://demo.artureanec.com/html/vendgo/img/product-single__img/2.png",
       "description": "I'm a short desc",
       "price": 1000,
-      "price_discount": 800,
       "specification": "I am a long desc",
       "height": 10,
       "width": 5,
@@ -47,12 +44,11 @@
     },
     {
       "id": 4,
-      "name": "Coffee Machine 10",
+      "name": "Toys Machine 10",
       "category": "Coffee machine",
       "image": "https://demo.artureanec.com/html/vendgo/img/product-single__img/2.png",
       "description": "I'm a short desc",
       "price": 1000,
-      "price_discount": 800,
       "specification": "I am a long desc",
       "height": 10,
       "width": 5,
@@ -62,12 +58,11 @@
     },
     {
       "id": 5,
-      "name": "Coffee Machine 10",
+      "name": "Water Machine 10",
       "category": "Coffee machine",
       "image": "https://demo.artureanec.com/html/vendgo/img/product-single__img/2.png",
       "description": "I'm a short desc",
       "price": 1000,
-      "price_discount": 800,
       "specification": "I am a long desc",
       "height": 10,
       "width": 5,
@@ -77,12 +72,11 @@
     },
     {
       "id": 6,
-      "name": "Coffee Machine 10",
+      "name": "Other Machine 10",
       "category": "Coffee machine",
       "image": "https://demo.artureanec.com/html/vendgo/img/product-single__img/2.png",
       "description": "I'm a short desc",
       "price": 1000,
-      "price_discount": 800,
       "specification": "I am a long desc",
       "height": 10,
       "width": 5,
@@ -149,52 +143,12 @@
       "phone": "+1264727294",
       "subject": "test",
       "message": "test"
-    },
-    {
-      "fullName": "Tatyana Pomogaeva",
-      "email": "t.pomogaeva",
-      "phone": "0996551383",
-      "subject": "Verification - address",
-      "message": "tfyvgjhnk",
-      "id": 2
-    },
-    {
-      "fullName": "Tatyana Pomogaeva",
-      "email": "t.pomogaeva@gmail.com",
-      "phone": "0996551383",
-      "subject": "Verification - address",
-      "message": null,
-      "id": 3
-    },
-    {
-      "fullName": "Tatyana Pomogaeva",
-      "email": "mkp",
-      "phone": "0996551383",
-      "subject": "Verification - address",
-      "message": null,
-      "id": 4
-    },
-    {
-      "email": "the",
-      "id": 5
-    },
-    {
-      "email": "t.pomogaeva@gmail.com",
-      "id": 6
     }
   ],
   "subscriptions": [
     {
       "id": 1,
       "email": "test@gmail.com"
-    },
-    {
-      "email": "cfgvjhkjlk",
-      "id": 2
-    },
-    {
-      "email": "test@gmail.com",
-      "id": 3
     }
   ]
 }

@@ -27,8 +27,4 @@ export class HomeSlidesService {
   public getHomeSlides(): Observable<Array<HomeSlide>> {
     return this.http.get<Array<HomeSlide>>(this.url);
   }
-
-  // public getProduct(productId: number): Observable<Product> {
-  //   return this.http.get<Product>(`${this.url}/${productId}`)
-  // }
 }

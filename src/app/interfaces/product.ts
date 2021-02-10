@@ -5,7 +5,6 @@ export interface Product {
   image: string,
   description: string,
   price: number,
-  price_discount: number,
   specification: string,
   height: number,
   width: number,

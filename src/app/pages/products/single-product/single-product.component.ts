@@ -11,6 +11,8 @@ import { ProductService } from 'src/app/services/product.service';
 export class SingleProductComponent implements OnInit {
   productId: number;
   product: Product;
+  productData: Product;
+  productList: Array<Product>;
 
   constructor(
     private route: ActivatedRoute,
@@ -18,10 +20,62 @@ export class SingleProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(params => this.getProductInfo(params.productId));
+    this.getProductData();
   }
 
   private async getProductInfo(productId: number): Promise<void> {
     this.product = await this.productService.getProduct(productId).toPromise();
+  }
+
+  getProductData(): void {
+    this.productService.productData.subscribe(data => {
+      this.productList = data;
+    });
+  }
+
+  slideConfig = {
+    "autoplay": true,
+    "dots": true,
+    "speed": 1200,
+    "slidesToShow": 1,
+    "slidesToScroll": 1,
+    "responsive": [
+      {
+        "breakpoint": 575,
+        "settings": {
+          "slidesToShow": 2,
+          "slidesToScroll": 2
+        }
+      },
+      {
+        "breakpoint": 767,
+        "settings": {
+          "slidesToShow": 3,
+          "slidesToScroll": 1
+        }
+      },
+      {
+        "breakpoint": 991,
+        "settings": {
+          "slidesToShow": 4,
+          "slidesToScroll": 1
+        }
+      },
+      {
+        "breakpoint": 1199,
+        "settings": {
+          "slidesToShow": 4,
+          "slidesToScroll": 1
+        }
+      }]
+  };
+
+  slickInit(e) {
+    console.log('slick initialized');
+  }
+
+  breakpoint(e) {
+    console.log('breakpoint');
   }
 
 }
