@@ -10,6 +10,7 @@ import { HomeSlidesService } from 'src/app/services/home-slides.service';
 
 export class HomeComponent implements OnInit {
 
+  imageUrl = `http://plushtoys-lb.com/megavending/`;
   homeSlideData: HomeSlide;
   homeSlidesList: Array<HomeSlide>;
 

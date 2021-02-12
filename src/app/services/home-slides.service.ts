@@ -11,7 +11,7 @@ export class HomeSlidesService {
 
   homeSlideData = new BehaviorSubject<Array<HomeSlide>>(null);
 
-  private url = `${environment.url}home_slides`;
+  private url = `http://plushtoys-lb.com/megavendingapi/api.php/home_slides`;
 
   constructor(private http: HttpClient) {
     this.getHomeSlidesData();

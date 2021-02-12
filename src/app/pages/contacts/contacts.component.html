@@ -130,14 +130,6 @@
   <!-- end section -->
 
   <!-- start section -->
-  <!-- <section class="section section--no-pt section--no-pb"> -->
-  <!-- this is demo key "AIzaSyBXQROV5YMCERGIIuwxrmaZbBl_Wm4Dy5U" -->
-  <!-- <div class="g_map" data-api-key="AIzaSyBXQROV5YMCERGIIuwxrmaZbBl_Wm4Dy5U" data-longitude="44.958309"
-      data-latitude="34.109925" data-marker="img/marker.png" style="min-height: 455px"></div>
-  </section> -->
-  <!-- end section -->
-
-  <!-- start section -->
   <section class="section">
     <div class="container">
       <div class="row justify-content-lg-center">
@@ -148,7 +140,7 @@
 
           <div class="spacer py-6"></div>
 
-          <form class="js-contact-form" (ngSubmit)="onSubmit()" [formGroup]="newRequestForm">
+          <form class="js-contact-form" id="form" (ngSubmit)="onSubmit()" [formGroup]="newRequestForm">
             <div class="row">
               <div class="col-12 col-md-6">
                 <div class="input-wrp">
