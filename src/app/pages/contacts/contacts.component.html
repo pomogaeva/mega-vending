@@ -198,7 +198,7 @@
             <button class="custom-btn custom-btn--big custom-btn--s3" type="submit" role="button">Send
               Message</button>
 
-            <div class="form__note"></div>
+            <div *ngIf="isSubmit" class="form__note">Thank you for your request! We'll get back to you soon.</div>
           </form>
         </div>
       </div>

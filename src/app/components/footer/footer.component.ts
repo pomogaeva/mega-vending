@@ -25,13 +25,11 @@ export class FooterComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.isSubmit = true;
-
     if (this.newSubscriptionsForm.invalid) {
       return;
     }
 
-    this.isSubmit = false;
+    this.isSubmit = true;
     this.save(this.newSubscriptionsForm.value);
   }
 
@@ -44,11 +42,15 @@ export class FooterComponent implements OnInit {
       ]
     });
 
+    setTimeout(() => {
+      this.isSubmit = false;
+    }, 3000);
+
   }
 
   public save(newSubscription: Subscriptions): void {
 
-    this.http.post('http://localhost:3000/subscriptions', newSubscription).subscribe(
+    this.http.post('http://plushtoys-lb.com/megavendingapi/api.php/subscriptions', newSubscription).subscribe(
       (response) => console.log(response),
       (error) => console.log(error)
     )

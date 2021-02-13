@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Request } from 'src/app/interfaces/request';
 import { HttpClient } from '@angular/common/http';
 
@@ -40,13 +40,11 @@ export class ContactsComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.isSubmit = true;
-
     if (this.newRequestForm.invalid) {
       return;
     }
 
-    this.isSubmit = false;
+    this.isSubmit = true;
     this.save(this.newRequestForm.value);
   }
 
@@ -71,11 +69,14 @@ export class ContactsComponent implements OnInit {
       message: [this.request?.message || null],
     });
 
+    setTimeout(() => {
+      this.isSubmit = false;
+    }, 3000);
   }
 
   public save(newRequest: Request): void {
 
-    this.http.post('http://localhost:3000/requests', newRequest).subscribe(
+    this.http.post('http://plushtoys-lb.com/megavendingapi/api.php/requests', newRequest).subscribe(
       (response) => console.log(response),
       (error) => console.log(error)
     )

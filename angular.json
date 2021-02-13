@@ -36,6 +36,7 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/slick-carousel/slick/slick.scss",
               "node_modules/slick-carousel/slick/slick-theme.scss",
               "src/css/critical.min.css",
@@ -43,11 +44,11 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "src/js/device.js",
-              "node_modules/jquery/dist/jquery.min.js",
-              "src/js/jquery-2.2.4.min.js",
-              "node_modules/slick-carousel/slick/slick.min.js",
-              "src/js/main.js"
+              "./src/js/device.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./src/js/jquery-2.2.4.min.js",
+              "./node_modules/slick-carousel/slick/slick.min.js",
+              "./src/js/main.js"
             ]
           },
           "configurations": {
@@ -114,17 +115,18 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/slick-carousel/slick/slick.scss",
               "node_modules/slick-carousel/slick/slick-theme.scss",
               "src/css/critical.min.css",
               "src/css/style.min.css"
             ],
             "scripts": [
-              "src/js/device.js",
-              "node_modules/jquery/dist/jquery.min.js",
-              "src/js/jquery-2.2.4.min.js",
-              "node_modules/slick-carousel/slick/slick.min.js",
-              "src/js/main.js"
+              "./src/js/device.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./src/js/jquery-2.2.4.min.js",
+              "./node_modules/slick-carousel/slick/slick.min.js",
+              "./src/js/main.js"
             ]
           }
         },
