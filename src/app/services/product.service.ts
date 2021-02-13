@@ -11,7 +11,7 @@ export class ProductService {
 
   productData = new BehaviorSubject<Array<Product>>(null);
 
-  private url = `${environment.url}products`;
+  private url = `http://plushtoys-lb.com/megavendingapi/api.php/products`;
 
   constructor(private http: HttpClient) {
     this.getProductData();

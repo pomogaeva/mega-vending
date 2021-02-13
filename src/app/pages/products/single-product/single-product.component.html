@@ -141,7 +141,7 @@
 
             <div class="__item" *ngFor="let product of productList">
               <figure class="__image __image--shadow __image--bg-white">
-                <img [src]="product.image" alt="demo" />
+                <img [src]="imageUrl/product.image" alt="demo" />
 
                 <div class="__btn">
                   <a class="custom-btn custom-btn--medium custom-btn--s3 wide" routerLink={{product.id}}>Show More</a>

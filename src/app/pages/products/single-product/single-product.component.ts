@@ -9,6 +9,7 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./single-product.component.scss']
 })
 export class SingleProductComponent implements OnInit {
+  imageUrl = `http://plushtoys-lb.com/megavending/`;
   productId: number;
   product: Product;
   productData: Product;
