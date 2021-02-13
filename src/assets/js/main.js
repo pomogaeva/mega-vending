@@ -16495,11 +16495,11 @@ var trim = String.prototype.trim ?
 		disable: 'mobile'
 	});
 
-	var VendiGO = {
+	window.VendiGO = {
 		onReady: function ()
 		{
 			this.jarallax();
-			this.slick();
+			//this.slick();
 			this.fancybox();
 			this.ionRangeSlider();
 			this.niceSelect();
@@ -16548,7 +16548,7 @@ var trim = String.prototype.trim ?
 
 				$(slider)
 					.on('init', function(event, slick) {
-						var slidesLength = slick.$slides.length,
+						var slidesLength = slick.$slides? slick.$slides.length:0,
 							galleryLinks = slick.$slider.find(".slick-cloned [data-fancybox]");
 
 						if ( galleryLinks.length > 0 )

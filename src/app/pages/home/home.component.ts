@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeSlide } from 'src/app/interfaces/home-slide';
 import { HomeSlidesService } from 'src/app/services/home-slides.service';
-
+declare const VendiGO: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    VendiGO.onReady();
     this.getHomeSlides();
   }
 

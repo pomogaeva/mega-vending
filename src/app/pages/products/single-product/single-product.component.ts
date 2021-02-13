@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/interfaces/product';
 import { ProductService } from 'src/app/services/product.service';
-
+declare const VendiGO: any;
 @Component({
   selector: 'app-single-product',
   templateUrl: './single-product.component.html',
@@ -20,6 +20,7 @@ export class SingleProductComponent implements OnInit {
     private productService: ProductService) { }
 
   ngOnInit(): void {
+    VendiGO.onReady();
     this.route.params.subscribe(params => this.getProductInfo(params.productId));
     this.getProductData();
   }

@@ -30,11 +30,12 @@
               "src/favicon.ico",
               "src/assets",
               "src/fonts",
-              "src/img"
+              "src/img",
+              "src/js"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/slick-carousel/slick/slick.scss",
@@ -44,11 +45,9 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "./src/js/device.js",
-              "./node_modules/jquery/dist/jquery.min.js",
-              "./src/js/jquery-2.2.4.min.js",
-              "./node_modules/slick-carousel/slick/slick.min.js",
-              "./src/js/main.js"
+              "src/assets/js/device.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/main.js"
             ]
           },
           "configurations": {
