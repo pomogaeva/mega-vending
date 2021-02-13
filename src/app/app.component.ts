@@ -32,7 +32,7 @@ export class AppComponent {
   //     $.getScript('/src/js/device.js');
   //     $.getScript('/node_modules/jquery/dist/jquery.min.js');
   //     $.getScript('/src/js/jquery-2.2.4.min.js');
-  //     $.getScript('/node_modules/slick-carousel/slick.slick.min.js');
+  //     $.getScript('/node_modules/slick-carousel/slick/slick.min.js');
   //     $.getScript('/src/js/main.js'); //Add path to your custom js file
 
   //   });
