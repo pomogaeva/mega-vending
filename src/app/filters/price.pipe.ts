@@ -6,13 +6,13 @@ import { Product } from '../interfaces/product';
 })
 export class PricePipe implements PipeTransform {
 
-  transform(value: Array<Product>, price: number, minPrice: number, maxPrice: number): Array<Product> {
+  transform(value: Array<Product>, price: number, minValue: number, maxValue: number): Array<Product> {
     if (!price) {
       return value;
     }
 
     return value.filter((el: Product) => {
-      return (el.price >= minPrice && el.price <= maxPrice);
+      return (el.price >= minValue && el.price <= maxValue);
     });
   }
 

@@ -176,6 +176,11 @@
               <div class="col-12 col-md-6">
                 <div class="input-wrp">
                   <input class="textfield" placeholder="Phone" name="phone" type="tel" formControlName="phone" />
+                  <div class="invalid-feedback" *ngIf="phoneControl.errors && phoneControl.touched">
+                    <span *ngIf="phoneControl.invalid">
+                      Please enter a valid phone number.
+                    </span>
+                  </div>
                 </div>
               </div>
 

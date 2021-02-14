@@ -20,6 +20,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { ProductCategoryPipe } from './filters/product-category.pipe';
 import { PricePipe } from './filters/price.pipe';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { PricePipe } from './filters/price.pipe';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
-    CollapseModule.forRoot()
+    CollapseModule.forRoot(),
+    NgxSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

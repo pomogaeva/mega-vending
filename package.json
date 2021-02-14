@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-slider/ngx-slider": "^2.0.3",
     "@angular/animations": "~11.0.4",
     "@angular/cdk": "^11.2.0",
     "@angular/common": "~11.0.4",
@@ -24,6 +25,8 @@
     "@types/jquery": "^3.5.5",
     "bootstrap": "^4.6.0",
     "jquery": "^3.5.1",
+    "ng2-ion-range-slider": "^2.0.0",
+    "ng5-slider": "^1.2.6",
     "ngx-bootstrap": "^6.2.0",
     "ngx-bootstrap-navbar": "0.0.5",
     "ngx-slick-carousel": "^0.5.1",

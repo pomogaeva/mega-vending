@@ -52,14 +52,27 @@
                   <div class="widget widget--price">
                     <h4 class="widget-title">Price</h4>
 
-                    <div>
+                    <!-- <ion-range-slider #sliderElement type="double" [min]="myMinVar" max="100" from="28" from_min="10"
+                      from_max="30" from_shadow="true" to="40" to_min="40" to_max="90" to_shadow="true" grid="true"
+                      grid_num="10" prefix="Weight: " postfix=" million pounds" decorate_both="false"
+                      (onUpdate)="myOnUpdate($event)" (onChange)="myOnChange($event)" (onFinish)="myOnFinish($event)">
+                    </ion-range-slider> -->
+
+
+                    <!-- <div>
                       <input type="text" class="js-range-slider" name="my_range" value="" data-type="double"
                         data-min="0" data-max="1000" data-from="200" data-to="600" data-grid="true" data-skin="round"
                         data-prefix="$" data-hide-min-max="true" />
 
                       <input class="range-slider-min-value" type="hidden" name="min-value">
                       <input class="range-slider-max-value" type="hidden" name="max-value">
+                    </div> -->
+
+                    <div>
+                      <ngx-slider name="price" [(value)]="minValue" [(highValue)]="maxValue" [options]="options">
+                      </ngx-slider>
                     </div>
+
                   </div>
                   <!-- end widget -->
 

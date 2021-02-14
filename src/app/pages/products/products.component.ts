@@ -4,7 +4,9 @@ import { Product } from 'src/app/interfaces/product';
 import { ProductCategory } from 'src/app/interfaces/product-category';
 import { ProductCategoryService } from 'src/app/services/product-category.service';
 import { ProductService } from 'src/app/services/product.service';
+import { Options } from 'ng5-slider';
 declare const VendiGO: any;
+declare let $: any;
 
 @Component({
   selector: 'app-products',
@@ -21,6 +23,19 @@ export class ProductsComponent implements OnInit {
 
   category: string;
 
+  minValue: number = 1000;
+  maxValue: number = 2000;
+  options: Options = {
+    floor: 0,
+    ceil: 3000,
+    showTicks: true,
+    tickStep: 500,
+    draggableRange: true,
+    translate: (value: number): string => {
+      return '$' + value;
+    }
+  };
+
   constructor(
     private route: ActivatedRoute,
     public productService: ProductService,
@@ -32,6 +47,10 @@ export class ProductsComponent implements OnInit {
     VendiGO.onReady();
     this.getProductData();
     this.getProductCategoryData();
+
+    $(".js-range-slider").ionRangeSlider({
+
+    });
   }
 
   getProductData(): void {
