@@ -78,7 +78,8 @@
                 <div class="row" *ngIf="productList">
                   <!-- <app-all-products *ngFor="let product of productsList" [product]="product"></app-all-products> -->
                   <!-- | filterProduct: category | filterPrices: price -->
-                  <div class="col-12 col-sm-6 col-lg-4" *ngFor="let product of productList | productCategory: category">
+                  <div class="col-12 col-sm-6 col-lg-4"
+                    *ngFor="let product of productList | productCategory: category | price: price">
                     <div class="__item">
                       <figure class="__image __image--shadow __image--bg-white">
                         <img [src]="imageUrl+'/'+product.image" alt="{{product.name}} photo" />
