@@ -125,15 +125,15 @@
           <!-- start icon list -->
           <div class="icon-list icon-list--s1">
             <div class="__inner">
-              <div class="row">
+              <div class="row" *ngIf="productCategoryList">
                 <!-- start item -->
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-6 col-md-4 col-lg-3" *ngFor="let productCategory of productCategoryList">
                   <div class="__item">
                     <figure class="__image">
-                      <img width="113" height="195" src="img/icon-list_img/1/1.png" alt="demo" />
+                      <img width="113" height="195" [src]="productCategory.image" alt="Product Category Photo" />
                     </figure>
 
-                    <h4><a href="#">Snack Vending Machine</a></h4>
+                    <h4><a href="#">{{productCategory.name}}</a></h4>
                   </div>
                 </div>
                 <!-- end item -->
