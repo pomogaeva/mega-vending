@@ -1,7 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { ProductCategory } from 'src/app/interfaces/product-category';
 import { Subscriptions } from 'src/app/interfaces/subscriptions';
+import { ProductCategoryService } from 'src/app/services/product-category.service';
 
 @Component({
   selector: 'app-footer',
@@ -14,10 +17,15 @@ export class FooterComponent implements OnInit {
   isSubmit = false;
   subscription: Subscriptions;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) { }
+  productCategoryData: ProductCategory;
+  productCategoryList: Array<ProductCategory>;
+
+  constructor(private fb: FormBuilder, private http: HttpClient, private route: ActivatedRoute,
+    public productCategoryService: ProductCategoryService) { }
 
   ngOnInit(): void {
     this.createNewSubscriptionsForm();
+    this.getProductCategoryData();
   }
 
   get emailControl(): any {
@@ -58,4 +66,9 @@ export class FooterComponent implements OnInit {
     this.createNewSubscriptionsForm();
   }
 
+  getProductCategoryData(): void {
+    this.productCategoryService.productCategoryData.subscribe(data => {
+      this.productCategoryList = data;
+    })
+  }
 }

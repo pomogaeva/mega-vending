@@ -50,13 +50,9 @@
 
             <div class="col-auto">
               <div class="footer__item">
-                <nav class="footer__navigation">
-                  <ul>
-                    <li routerLinkActive="active"><a href="#">Snack Vending Machines</a></li>
-                    <li routerLinkActive="active"><a href="#">Beverage Vending Machines</a></li>
-                    <li routerLinkActive="active"><a href="#">Combo Vending Machines</a></li>
-                    <li routerLinkActive="active"><a href="#">Coffee Machines</a></li>
-                    <li routerLinkActive="active"><a href="#">ATMs Machines</a></li>
+                <nav class="footer__navigation" *ngIf="productCategoryList">
+                  <ul *ngFor="let productCategory of productCategoryList">
+                    <li routerLinkActive="active"><a routerLink="products">{{productCategory.name}}</a></li>
                   </ul>
                 </nav>
               </div>

@@ -38,7 +38,9 @@
                     <div *ngIf="productCategoryList">
                       <ul class="list" *ngFor="let productCategory of productCategoryList">
                         <li class="list__item">
-                          <a class="list__item__link" href="#">{{productCategory.name}}</a>
+                          <input [id]="productCategory.name" name="category" type="radio" [(ngModel)]="category"
+                            class="list__item__link">
+                          <label [for]="productCategory.name">{{productCategory.name}}</label>
                         </li>
 
                       </ul>
@@ -76,7 +78,7 @@
                 <div class="row" *ngIf="productList">
                   <!-- <app-all-products *ngFor="let product of productsList" [product]="product"></app-all-products> -->
                   <!-- | filterProduct: category | filterPrices: price -->
-                  <div class="col-12 col-sm-6 col-lg-4" *ngFor="let product of productList">
+                  <div class="col-12 col-sm-6 col-lg-4" *ngFor="let product of productList | productCategory: category">
                     <div class="__item">
                       <figure class="__image __image--shadow __image--bg-white">
                         <img [src]="imageUrl+'/'+product.image" alt="{{product.name}} photo" />

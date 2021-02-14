@@ -18,6 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { ProductCategoryPipe } from './filters/product-category.pipe';
+import { PricePipe } from './filters/price.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
     PageNotFoundComponent,
     ProductsComponent,
     SingleProductComponent,
+    ProductCategoryPipe,
+    PricePipe,
   ],
   imports: [
     BrowserModule,
