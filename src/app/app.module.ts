@@ -11,10 +11,13 @@ import { ContactsComponent } from './pages/contacts/contacts.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { SingleProductComponent } from './pages/products/single-product/single-product.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SlickCarouselModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    BsDropdownModule.forRoot(),
+    CollapseModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
