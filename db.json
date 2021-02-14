@@ -178,5 +178,27 @@
       "email": "test@yahoo.com",
       "id": 2
     }
+  ],
+  "product_categories": [
+    {
+      "id": 1,
+      "name": "water machine",
+      "image": "img/icon-list_img/1/3.png"
+    },
+    {
+      "id": 2,
+      "name": "combo machine",
+      "image": "img/icon-list_img/1/12.png"
+    },
+    {
+      "id": 3,
+      "name": "snack machine",
+      "image": "img/icon-list_img/1/1.png"
+    },
+    {
+      "id": 4,
+      "name": "coffee machine",
+      "image": "img/icon-list_img/1/7.png"
+    }
   ]
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/interfaces/product';
+import { ProductCategory } from 'src/app/interfaces/product-category';
+import { ProductCategoryService } from 'src/app/services/product-category.service';
 import { ProductService } from 'src/app/services/product.service';
 declare const VendiGO: any;
 
@@ -14,15 +16,20 @@ export class ProductsComponent implements OnInit {
   productData: Product;
   productList: Array<Product>;
 
+  productCategoryData: ProductCategory;
+  productCategoryList: Array<ProductCategory>;
+
   constructor(
     private route: ActivatedRoute,
-    public productService: ProductService
+    public productService: ProductService,
+    public productCategoryService: ProductCategoryService
   ) {
   }
 
   ngOnInit(): void {
     VendiGO.onReady();
     this.getProductData();
+    this.getProductCategoryData();
   }
 
   getProductData(): void {
@@ -30,4 +37,11 @@ export class ProductsComponent implements OnInit {
       this.productList = data;
     });
   }
+
+  getProductCategoryData(): void {
+    this.productCategoryService.productCategoryData.subscribe(data => {
+      this.productCategoryList = data;
+    })
+  }
+
 }
