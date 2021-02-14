@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Request } from 'src/app/interfaces/request';
 import { HttpClient } from '@angular/common/http';
+declare const VendiGO: any;
 
 @Component({
   selector: 'app-contacts',
@@ -16,6 +17,7 @@ export class ContactsComponent implements OnInit {
   constructor(private fb: FormBuilder, private http: HttpClient) { }
 
   ngOnInit(): void {
+    VendiGO.onReady();
     this.createNewRequestForm();
   }
 
