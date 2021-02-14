@@ -1,6 +1,21 @@
 header {
   box-shadow: 0 3px 2px -2px #e6e6e6;
 }
+
+.navbar-default {
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 #fix-for-navbar-fixed-top-spacing {
   height: 120px;
+
+  @media screen and (max-width: 1199px) {
+    height: 88px;    
+  }
+
+  @media screen and (max-width: 576px) {
+    height: 70px;
+  }
 }
