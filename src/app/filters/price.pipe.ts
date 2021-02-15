@@ -7,7 +7,7 @@ import { Product } from '../interfaces/product';
 export class PricePipe implements PipeTransform {
 
   transform(value: Array<Product>, price: number, minValue: number, maxValue: number): Array<Product> {
-    if (!price) {
+    if (!minValue || !maxValue) {
       return value;
     }
 
