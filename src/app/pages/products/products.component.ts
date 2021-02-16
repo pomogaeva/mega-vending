@@ -1,10 +1,10 @@
+import { Options } from '@angular-slider/ngx-slider/options';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/interfaces/product';
 import { ProductCategory } from 'src/app/interfaces/product-category';
 import { ProductCategoryService } from 'src/app/services/product-category.service';
 import { ProductService } from 'src/app/services/product.service';
-import { Options } from 'ng5-slider';
 declare const VendiGO: any;
 declare let $: any;
 

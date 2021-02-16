@@ -27,6 +27,7 @@
     "jquery": "^3.5.1",
     "ngx-bootstrap": "^6.2.0",
     "ngx-bootstrap-navbar": "0.0.5",
+    "ngx-pagination": "^5.0.0",
     "ngx-slick-carousel": "^0.5.1",
     "rxjs": "~6.6.0",
     "slick-carousel": "^1.8.1",
