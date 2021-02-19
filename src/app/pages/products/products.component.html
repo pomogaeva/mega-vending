@@ -76,7 +76,7 @@
                   <!-- <app-all-products *ngFor="let product of productsList" [product]="product"></app-all-products> -->
                   <!-- | filterProduct: category | filterPrices: price -->
                   <div class="col-12 col-sm-6 col-lg-4"
-                    *ngFor="let product of productList | productCategory: category | price: price">
+                    *ngFor="let product of productList | productCategory: category | price: price | paginate: { itemsPerPage: 1, currentPage: p }">
                     <div class="__item">
                       <figure class="__image __image--shadow __image--bg-white">
                         <img [src]="imageUrl+'/'+product.image" alt="{{product.name}} photo" />
@@ -96,6 +96,7 @@
                       </div>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -104,7 +105,8 @@
             <div class="spacer py-5 py-lg-7"></div>
 
             <!-- start pagination -->
-            <nav aria-label="Page navigation example">
+            <!-- <pagination-controls (pageChange)="p = $event"></pagination-controls> -->
+            <!-- <nav aria-label="Page navigation example">
               <ul class="pagination justify-content-center justify-content-sm-end">
                 <li class="page-item"><a class="page-link" href="#">1</a></li>
                 <li class="page-item active"><a class="page-link" href="#">2</a></li>
@@ -112,7 +114,7 @@
                 <li class="page-item"><a class="page-link" href="#">4</a></li>
                 <li class="page-item"><a class="page-link" href="#">5</a></li>
               </ul>
-            </nav>
+            </nav> -->
             <!-- end pagination -->
 
           </div>
