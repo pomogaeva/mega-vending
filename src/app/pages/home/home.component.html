@@ -130,7 +130,8 @@
                 <div class="col-6 col-md-4 col-lg-3" *ngFor="let productCategory of productCategoryList">
                   <div class="__item">
                     <figure class="__image">
-                      <img width="113" height="195" [src]="productCategory.image" alt="Product Category Photo" />
+                      <img width="113" height="195" [src]="imageUrl+'/'+productCategory.image"
+                        alt="Product Category Photo" />
                     </figure>
 
                     <h4><a routerLink="/products">{{productCategory.name}}</a></h4>

@@ -1,3 +1,16 @@
 .ngx-pagination a, .ngx-pagination button {
   color: #f95a3f !important;
 }
+
+input.list__item__link {
+  visibility: hidden;
+  display: none;
+}
+
+label.product-category {
+  color: #25272a;
+}
+
+input.list__item__link:checked ~ label.product-category {
+  color: red;
+}

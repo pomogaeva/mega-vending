@@ -9,7 +9,7 @@ import { ProductCategory } from '../interfaces/product-category';
 export class ProductCategoryService {
   productCategoryData = new BehaviorSubject<Array<ProductCategory>>(null);
 
-  private url = `http://localhost:3000/product_categories`;
+  private url = `http://plushtoys-lb.com/megavendingapi/api.php/product_categories`;
 
   constructor(private http: HttpClient) {
     this.getProductCategoryData();

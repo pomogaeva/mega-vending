@@ -10,5 +10,5 @@ export interface Product {
   width: number,
   depth: number,
   weight: number,
-  electrical: number,
+  electrical: number
 }

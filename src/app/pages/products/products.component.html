@@ -38,11 +38,18 @@
                     <div *ngIf="productCategoryList">
                       <ul class="list" *ngFor="let productCategory of productCategoryList">
                         <li class="list__item">
-                          <input [id]="productCategory.name" name="category" type="radio" [(ngModel)]="category"
-                            class="list__item__link">
-                          <label [for]="productCategory.name">{{productCategory.name}}</label>
+                          <input [id]="productCategory.name" name="category" [value]="productCategory.name" type="radio"
+                            [(ngModel)]="category" class="list__item__link">
+                          <label class="product-category" [for]="productCategory.name">{{productCategory.name}}</label>
                         </li>
-
+                      </ul>
+                    </div>
+                    <div>
+                      <ul class="list">
+                        <li class="list__item">
+                          <input type="radio" id="all" name="category" [(ngModel)]="category" class="list__item__link">
+                          <label class="product-category" for="all">all categories</label>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -76,7 +83,7 @@
                   <!-- <app-all-products *ngFor="let product of productsList" [product]="product"></app-all-products> -->
                   <!-- | filterProduct: category | filterPrices: price -->
                   <div class="col-12 col-sm-6 col-lg-4"
-                    *ngFor="let product of productList | productCategory: category | price: minValue:maxValue | paginate: { itemsPerPage: 1, currentPage: p }">
+                    *ngFor="let product of productList | productCategory: category | price: minValue:maxValue | paginate: { itemsPerPage: 10, currentPage: p }">
                     <div class="__item">
                       <figure class="__image __image--shadow __image--bg-white">
                         <img [src]="imageUrl+'/'+product.image" alt="{{product.name}} photo" />
@@ -105,7 +112,7 @@
             <div class="spacer py-5 py-lg-7"></div>
 
             <!-- start pagination -->
-            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            <!-- <pagination-controls (pageChange)="p = $event"></pagination-controls> -->
             <!-- <nav aria-label="Page navigation example">
               <ul class="pagination justify-content-center justify-content-sm-end">
                 <li class="page-item"><a class="page-link" href="#">1</a></li>
