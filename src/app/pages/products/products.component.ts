@@ -47,10 +47,6 @@ export class ProductsComponent implements OnInit {
     VendiGO.onReady();
     this.getProductData();
     this.getProductCategoryData();
-
-    $(".js-range-slider").ionRangeSlider({
-
-    });
   }
 
   getProductData(): void {

@@ -38,9 +38,9 @@
                     <div *ngIf="productCategoryList">
                       <ul class="list" *ngFor="let productCategory of productCategoryList">
                         <li class="list__item">
-                          <input [id]="productCategory.name" name="category" [value]="productCategory.name" type="radio"
+                          <input [id]="productCategory.id" name="category" [value]="productCategory.id" type="radio"
                             [(ngModel)]="category" class="list__item__link">
-                          <label class="product-category" [for]="productCategory.name">{{productCategory.name}}</label>
+                          <label class="product-category" [for]="productCategory.id">{{productCategory.name}}</label>
                         </li>
                       </ul>
                     </div>
