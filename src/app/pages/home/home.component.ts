@@ -4,6 +4,9 @@ import { HomeSlide } from 'src/app/interfaces/home-slide';
 import { ProductCategory } from 'src/app/interfaces/product-category';
 import { HomeSlidesService } from 'src/app/services/home-slides.service';
 import { ProductCategoryService } from 'src/app/services/product-category.service';
+import { NgxMasonryOptions } from 'ngx-masonry';
+import { animate, style } from '@angular/animations';
+
 declare const VendiGO: any;
 
 @Component({
@@ -13,6 +16,27 @@ declare const VendiGO: any;
 })
 
 export class HomeComponent implements OnInit {
+
+  masonryItems = [
+    { title: 'item 1' },
+    { title: 'item 2' },
+    { title: 'item 3' },
+  ];
+
+  public masonryOptions: NgxMasonryOptions = {
+    gutter: 10
+  };
+
+  // animations = {
+  //   show: [
+  //     style({ opacity: 0 }),
+  //     animate('400ms ease-in', style({ opacity: 1 })),
+  //   ],
+  //   hide: [
+  //     style({ opacity: '*' }),
+  //     animate('400ms ease-in', style({ opacity: 0 })),
+  //   ]
+  // };
 
   imageUrl = `http://plushtoys-lb.com/megavending/`;
   homeSlideData: HomeSlide;

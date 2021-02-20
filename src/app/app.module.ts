@@ -22,6 +22,7 @@ import { ProductCategoryPipe } from './filters/product-category.pipe';
 import { PricePipe } from './filters/price.pipe';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { NgxMasonryModule } from 'ngx-masonry';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     BsDropdownModule.forRoot(),
     CollapseModule.forRoot(),
     NgxSliderModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    NgxMasonryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

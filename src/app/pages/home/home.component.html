@@ -210,8 +210,17 @@
 
     <!-- <div class="elfsight-app-b0f1fb16-e81e-492b-9c20-a3750de9e220"></div> -->
 
+    <ngx-masonry>
+      <div ngxMasonryItem class="masonry-item" *ngFor="let item of masonryItems">
+        {{item.title}}
+      </div>
+    </ngx-masonry>
+
+    <ngx-masonry [options]="masonryOptions" class="grid"
+      data-masonry='{ "columnWidth": ".js-isotope__sizer", "itemSelector": ".masonry-item" }'></ngx-masonry>
+
     <!-- start gallery -->
-    <div id="gallery-grid-1" class="gallery gallery--grid">
+    <!-- <div id="gallery-grid-1" class="gallery gallery--grid">
       <div class="row no-gutters js-isotope" data-isotope-options='{
           "itemSelector": ".js-isotope__item",
           "transitionDuration": "0.8s",
@@ -219,10 +228,10 @@
           "masonry": { "columnWidth": ".js-isotope__sizer" }
         }'>
 
-        <div class="col-12 col-sm-1  js-isotope__sizer"></div>
+        <div class="col-12 col-sm-1  js-isotope__sizer"></div> -->
 
-        <!-- start item -->
-        <div class="col-12 col-sm-6 col-lg-4 col-xl-3  js-isotope__item  category-2">
+    <!-- start item -->
+    <!-- <div class="col-12 col-sm-6 col-lg-4 col-xl-3  js-isotope__item  category-2">
           <div class="__item" data-x="1" data-y="1">
             <figure class="__image">
               <img src="img/gallery_img/1.jpg" alt="demo" />
@@ -242,11 +251,11 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- end item -->
+        </div> -->
+    <!-- end item -->
 
-        <!-- start item -->
-        <div class="col-12 col-sm-6 col-lg-4 col-xl-3  js-isotope__item  category-1">
+    <!-- start item -->
+    <!-- <div class="col-12 col-sm-6 col-lg-4 col-xl-3  js-isotope__item  category-1">
           <div class="__item" data-x="1" data-y="1">
             <figure class="__image">
               <img src="img/gallery_img/2.jpg" alt="demo" />
@@ -266,11 +275,11 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- end item -->
+        </div> -->
+    <!-- end item -->
 
-        <!-- start item -->
-        <div class="col-12 col-sm-6 col-lg-4 col-xl-6  js-isotope__item  category-3">
+    <!-- start item -->
+    <!-- <div class="col-12 col-sm-6 col-lg-4 col-xl-6  js-isotope__item  category-3">
           <div class="__item" data-x="1" data-y="1">
             <figure class="__image">
               <img src="img/gallery_img/3.jpg" alt="demo" />
@@ -290,11 +299,11 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- end item -->
+        </div> -->
+    <!-- end item -->
 
-        <!-- start item -->
-        <div class="col-12 col-sm-6 col-lg-4 col-xl-3  js-isotope__item  category-1">
+    <!-- start item -->
+    <!-- <div class="col-12 col-sm-6 col-lg-4 col-xl-3  js-isotope__item  category-1">
           <div class="__item" data-x="1" data-y="1">
             <figure class="__image">
               <img src="img/gallery_img/4.jpg" alt="demo" />
@@ -314,11 +323,11 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- end item -->
+        </div> -->
+    <!-- end item -->
 
-        <!-- start item -->
-        <div class="col-12 col-md-4 col-xl-3  js-isotope__item  category-2">
+    <!-- start item -->
+    <!-- <div class="col-12 col-md-4 col-xl-3  js-isotope__item  category-2">
           <div class="__item" data-x="1" data-y="1">
             <figure class="__image">
               <img src="img/gallery_img/5.jpg" alt="demo" />
@@ -338,11 +347,11 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- end item -->
+        </div> -->
+    <!-- end item -->
 
-        <!-- start item -->
-        <div class="col-12 col-md-8 col-xl-6  js-isotope__item  category-3">
+    <!-- start item -->
+    <!-- <div class="col-12 col-md-8 col-xl-6  js-isotope__item  category-3">
           <div class="__item" data-x="2" data-y="1">
             <figure class="__image">
               <img src="img/gallery_img/6.jpg" alt="demo" />
@@ -362,11 +371,11 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- end item -->
+        </div> -->
+    <!-- end item -->
 
-        <!-- start item -->
-        <div class="col-12 col-sm-6 col-lg-4 col-xl-3  js-isotope__item  category-1">
+    <!-- start item -->
+    <!-- <div class="col-12 col-sm-6 col-lg-4 col-xl-3  js-isotope__item  category-1">
           <div class="__item" data-x="1" data-y="1">
             <figure class="__image">
               <img src="img/gallery_img/7.jpg" alt="demo" />
@@ -386,11 +395,11 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- end item -->
+        </div> -->
+    <!-- end item -->
 
-        <!-- start item -->
-        <div class="col-12 col-sm-6 col-lg-4 col-xl-3  js-isotope__item  category-2">
+    <!-- start item -->
+    <!-- <div class="col-12 col-sm-6 col-lg-4 col-xl-3  js-isotope__item  category-2">
           <div class="__item" data-x="1" data-y="1">
             <figure class="__image">
               <img src="img/gallery_img/8.jpg" alt="demo" />
@@ -410,10 +419,10 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- end item -->
-      </div>
-    </div>
+        </div> -->
+    <!-- end item -->
+    <!-- </div>
+    </div> -->
     <!-- end gallery -->
   </section>
   <!-- end section -->

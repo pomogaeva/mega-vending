@@ -127,7 +127,7 @@
         <div class="col-12">
 
           <div class="section-heading section-heading--left">
-            <h2 class="__title">Mega<span>Vending</span> Featured Products</h2>
+            <h2 class="__title">Mega<span>Vending</span> Similar Products</h2>
           </div>
 
           <div class="spacer py-6"></div>
@@ -135,20 +135,22 @@
           <ngx-slick-carousel class="goods goods--slider" #slickModal="slick-carousel" [config]="slideConfig"
             (init)="slickInit($event)" (breakpoint)="breakpoint($event)" *ngIf="productList">
 
-            <div class="__item" *ngFor="let product of productList">
-              <figure class="__image __image--shadow __image--bg-white">
-                <img [src]="imageUrl+'/'+product.image" alt="demo" />
+            <div class="__item" *ngFor="let product of productList | productCategory: product.category">
+              <div>
+                <figure class="__image __image--shadow __image--bg-white">
+                  <img [src]="imageUrl+'/'+product.image" alt="demo" />
 
-                <div class="__btn">
-                  <a class="custom-btn custom-btn--medium custom-btn--s3 wide" routerLink={{product.id}}>Show More</a>
-                </div>
-              </figure>
+                  <div class="__btn">
+                    <a class="custom-btn custom-btn--medium custom-btn--s3 wide" routerLink={{product.id}}>Show More</a>
+                  </div>
+                </figure>
 
-              <div class="__content">
-                <div class="product-price">
-                  <span class="product-price__item product-price__item--new">{{product.price}}$</span>
+                <div class="__content">
+                  <div class="product-price">
+                    <span class="product-price__item product-price__item--new">{{product.price}}$</span>
+                  </div>
+                  <h4 class="__title"><a routerLink={{product.id}}>{{product.name}}</a></h4>
                 </div>
-                <h4 class="__title"><a routerLink={{product.id}}>{{product.name}}</a></h4>
               </div>
             </div>
 
