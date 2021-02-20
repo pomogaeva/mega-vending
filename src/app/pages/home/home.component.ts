@@ -4,9 +4,9 @@ import { HomeSlide } from 'src/app/interfaces/home-slide';
 import { ProductCategory } from 'src/app/interfaces/product-category';
 import { HomeSlidesService } from 'src/app/services/home-slides.service';
 import { ProductCategoryService } from 'src/app/services/product-category.service';
-import { NgxMasonryOptions } from 'ngx-masonry';
-import { animate, style } from '@angular/animations';
 import { IsotopeOptions } from 'ngx-isotope';
+import { Gallery } from 'src/app/interfaces/gallery';
+import { GalleryService } from 'src/app/services/gallery.service';
 
 declare const VendiGO: any;
 
@@ -18,31 +18,11 @@ declare const VendiGO: any;
 
 export class HomeComponent implements OnInit {
 
-  masonryItems = [
-    { title: 'item 1' },
-    { title: 'item 2' },
-    { title: 'item 3' },
-  ];
-
-  public masonryOptions: NgxMasonryOptions = {
-    gutter: 10
-  };
   public isotopeOptions: IsotopeOptions = {
     itemSelector: ".js-isotope__item",
     percentPosition: true,
     masonry: { "columnWidth": ".js-isotope__sizer" }
   };
-
-  // animations = {
-  //   show: [
-  //     style({ opacity: 0 }),
-  //     animate('400ms ease-in', style({ opacity: 1 })),
-  //   ],
-  //   hide: [
-  //     style({ opacity: '*' }),
-  //     animate('400ms ease-in', style({ opacity: 0 })),
-  //   ]
-  // };
 
   imageUrl = `http://plushtoys-lb.com/megavending/`;
   homeSlideData: HomeSlide;
@@ -51,10 +31,14 @@ export class HomeComponent implements OnInit {
   productCategoryData: ProductCategory;
   productCategoryList: Array<ProductCategory>;
 
+  galleryData: Gallery;
+  galleryList: Array<Gallery>;
+
   constructor(
     public homeSlidesService: HomeSlidesService,
     private route: ActivatedRoute,
-    public productCategoryService: ProductCategoryService
+    public productCategoryService: ProductCategoryService,
+    public galleryService: GalleryService
   ) {
   }
 
@@ -62,6 +46,7 @@ export class HomeComponent implements OnInit {
     VendiGO.onReady();
     this.getHomeSlides();
     this.getProductCategoryData();
+    this.getGalleryData();
   }
 
   getHomeSlides(): void {
@@ -93,6 +78,12 @@ export class HomeComponent implements OnInit {
   getProductCategoryData(): void {
     this.productCategoryService.productCategoryData.subscribe(data => {
       this.productCategoryList = data;
+    })
+  }
+
+  getGalleryData(): void {
+    this.galleryService.galleryData.subscribe(data => {
+      this.galleryList = data;
     })
   }
 
