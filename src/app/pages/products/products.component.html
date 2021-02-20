@@ -89,7 +89,8 @@
                         <img [src]="imageUrl+'/'+product.image" alt="{{product.name}} photo" />
 
                         <div class="__btn">
-                          <a class="custom-btn custom-btn--medium custom-btn--s3 wide" [routerLink]="product.id">More
+                          <a class="custom-btn custom-btn--medium custom-btn--s3 wide"
+                            [routerLink]="product.category+'/'+product.id">More
                             Info</a>
                         </div>
                       </figure>

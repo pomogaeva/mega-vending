@@ -16,7 +16,7 @@ const routes: Routes = [
   {
     path: 'products', component: ProductsComponent
   },
-  { path: 'products/:productId', component: SingleProductComponent },
+  { path: 'products/:productCategory/:productId', component: SingleProductComponent },
   { path: 'contacts', component: ContactsComponent },
 
   { path: '**', component: PageNotFoundComponent }
