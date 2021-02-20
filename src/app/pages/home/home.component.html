@@ -210,15 +210,36 @@
 
     <!-- <div class="elfsight-app-b0f1fb16-e81e-492b-9c20-a3750de9e220"></div> -->
 
-    <ngx-masonry>
-      <div ngxMasonryItem class="masonry-item" *ngFor="let item of masonryItems">
-        {{item.title}}
-      </div>
-    </ngx-masonry>
+    <isotope-grid id="gallery-grid-1" class="gallery gallery--grid">
+      <div class="col-12 col-sm-1  js-isotope__sizer"></div>
+      <!-- <isotope-item class="col-12 col-sm-6 col-lg-4 col-xl-3  js-isotope__item  category-2"
+        *ngFor="let productCategory of productCategoryList">
+        <img [src]="imageUrl+'/'+productCategory.image" alt="Product Category Photo" />
+      </isotope-item> -->
+      <!-- start item -->
+      <isotope-item  class="col-12 col-sm-6 col-lg-4 col-xl-3  js-isotope__item  category-2" *ngFor="let productCategory of productCategoryList">
+        <div class="__item" data-x="1" data-y="1">
+          <figure class="__image">
+            <img [src]="imageUrl+'/'+productCategory.image" alt="demo" />
+          </figure>
 
-    <ngx-masonry [options]="masonryOptions" class="grid"
-      data-masonry='{ "columnWidth": ".js-isotope__sizer", "itemSelector": ".masonry-item" }'></ngx-masonry>
+          <div class="__content">
+            <div class="row">
+              <div class="col">
+                <div class="h4 __title">{{productCategory.name}}</div>
+              </div>
 
+              <div class="col-auto">
+                <a class="__link" [href]="imageUrl+'/'+productCategory.image" data-fancybox="gallery-masonry">
+                  <i class="fontello-resize"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </isotope-item>
+      <!-- end item -->
+    </isotope-grid>
     <!-- start gallery -->
     <!-- <div id="gallery-grid-1" class="gallery gallery--grid">
       <div class="row no-gutters js-isotope" data-isotope-options='{

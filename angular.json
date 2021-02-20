@@ -44,7 +44,8 @@
             "scripts": [
               "src/assets/js/device.js",
               "node_modules/jquery/dist/jquery.min.js",
-              "src/assets/js/main.js"
+              "src/assets/js/main.js",
+              "node_modules/imagesloaded/imagesloaded.js"
             ]
           },
           "configurations": {

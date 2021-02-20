@@ -23,6 +23,7 @@ import { PricePipe } from './filters/price.pipe';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { NgxMasonryModule } from 'ngx-masonry';
+import { IsotopeModule } from 'ngx-isotope';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { NgxMasonryModule } from 'ngx-masonry';
     CollapseModule.forRoot(),
     NgxSliderModule,
     NgxPaginationModule,
-    NgxMasonryModule
+    NgxMasonryModule,
+    IsotopeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

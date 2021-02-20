@@ -6,6 +6,7 @@ import { HomeSlidesService } from 'src/app/services/home-slides.service';
 import { ProductCategoryService } from 'src/app/services/product-category.service';
 import { NgxMasonryOptions } from 'ngx-masonry';
 import { animate, style } from '@angular/animations';
+import { IsotopeOptions } from 'ngx-isotope';
 
 declare const VendiGO: any;
 
@@ -25,6 +26,11 @@ export class HomeComponent implements OnInit {
 
   public masonryOptions: NgxMasonryOptions = {
     gutter: 10
+  };
+  public isotopeOptions: IsotopeOptions = {
+    itemSelector: ".js-isotope__item",
+    percentPosition: true,
+    masonry: { "columnWidth": ".js-isotope__sizer" }
   };
 
   // animations = {
