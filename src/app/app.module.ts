@@ -24,6 +24,7 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { NgxMasonryModule } from 'ngx-masonry';
 import { IsotopeModule } from 'ngx-isotope';
+import { TopBarComponent } from './components/top-bar/top-bar.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { IsotopeModule } from 'ngx-isotope';
     SingleProductComponent,
     ProductCategoryPipe,
     PricePipe,
+    TopBarComponent,
   ],
   imports: [
     BrowserModule,

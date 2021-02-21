@@ -1,4 +1,6 @@
-<app-header *ngIf="showHeader"></app-header>
+<app-top-bar *ngIf="showHeader"></app-top-bar>
+<app-header></app-header>
+<app-top-bar *ngIf="!showHeader"></app-top-bar>
 
 <router-outlet></router-outlet>
 

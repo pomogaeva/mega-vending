@@ -8,17 +8,17 @@ header {
   padding-bottom: 0;
 }
 
-#fix-for-navbar-fixed-top-spacing {
-  height: 120px;
+// #fix-for-navbar-fixed-top-spacing {
+//   height: 120px;
 
-  @media screen and (max-width: 1199px) {
-    height: 88px;    
-  }
+//   @media screen and (max-width: 1199px) {
+//     height: 88px;    
+//   }
 
-  @media screen and (max-width: 576px) {
-    height: 70px;
-  }
-}
+//   @media screen and (max-width: 576px) {
+//     height: 70px;
+//   }
+// }
 
 img.logo {
   width: auto;
