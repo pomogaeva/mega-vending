@@ -12,8 +12,12 @@ export class AppComponent {
   constructor(private router: Router) {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {
+        console.log('Nav started');
+        console.log(event)
         if(event.url.includes('home')) {
           this.showHeader = false;
+        } else {
+          this.showHeader = true;
         }
       }
     });
