@@ -9,6 +9,8 @@ import { NavigationStart, Router, Event, NavigationEnd } from '@angular/router';
 export class AppComponent {
 
   showHeader: boolean = true;
+  showFooter: boolean = true;
+
   constructor(private router: Router) {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {
@@ -27,6 +29,7 @@ export class AppComponent {
         const componentName = currentComponent.constructor.name;
         if (componentName === 'PageNotFoundComponent') {
           this.showHeader = false;
+          this.showFooter = false;
         }
       }
     });
