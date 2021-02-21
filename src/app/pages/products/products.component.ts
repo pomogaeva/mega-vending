@@ -50,7 +50,7 @@ export class ProductsComponent implements OnInit {
 
       let minPrice = params['from'];
       console.log(minPrice);
-      if (minPrice == undefined)
+      if (!isNaN(minPrice))
         this.minValue = minPrice;
 
       let maxPrice = params['to'];
