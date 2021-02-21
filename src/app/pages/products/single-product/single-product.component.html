@@ -135,14 +135,14 @@
           <ngx-slick-carousel class="goods goods--slider" #slickModal="slick-carousel" [config]="slideConfig"
             (init)="slickInit($event)" (breakpoint)="breakpoint($event)" *ngIf="productList">
 
-          <div ngxSlickItem class="__item" *ngFor="let similarProduct of productList | productCategory: '' :product">
+            <div ngxSlickItem class="__item" *ngFor="let similarProduct of productList | productCategory: '' :product">
               <div *ngIf="product && similarProduct && similarProduct.id != product.id">
                 <figure class="__image __image--shadow __image--bg-white">
                   <img [src]="imageUrl+'/'+similarProduct.image" alt="demo" />
 
                   <div class="__btn">
                     <a class="custom-btn custom-btn--medium custom-btn--s3 wide"
-                      [routerLink]="'../../'+similarProduct.category+'/'+similarProduct.id">Show
+                      [routerLink]="'../../'+similarProduct.name+'/'+similarProduct.id">Show
                       More</a>
                   </div>
                 </figure>
@@ -151,7 +151,8 @@
                   <div class="product-price">
                     <span class="product-price__item product-price__item--new">{{similarProduct.price}}$</span>
                   </div>
-                  <h4 class="__title"><a [routerLink]="'../../'+similarProduct.category+'/'+similarProduct.id">{{similarProduct.name}}</a>
+                  <h4 class="__title"><a
+                      [routerLink]="'../../'+similarProduct.name+'/'+similarProduct.id">{{similarProduct.name}}</a>
                   </h4>
                 </div>
               </div>
