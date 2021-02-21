@@ -48,13 +48,13 @@ export class ProductsComponent implements OnInit {
       console.log(cat);
       this.category = cat;
 
-      // let minPrice = params['from'];
-      // console.log(minPrice);
-      // this.minValue = minPrice;
+      let minPrice = params['from'];
+      console.log(minPrice);
+      this.minValue = minPrice;
 
-      // let maxPrice = params['to'];
-      // console.log(maxPrice);
-      // this.maxValue = maxPrice;
+      let maxPrice = params['to'];
+      console.log(maxPrice);
+      this.maxValue = maxPrice;
 
       // this.handleQueryParams = 'merge';
 

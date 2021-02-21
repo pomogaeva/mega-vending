@@ -56,8 +56,9 @@
 
                     <div>
                       <ngx-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"
-                        routerLink="../products">
-                        <!-- [queryParams]="priceParams" queryParamsHandling="merge" -->
+                        routerLink="../products" [queryParams]="{from: minValue, to: maxValue}"
+                        queryParamsHandling="merge">
+                        <!--  -->
                       </ngx-slider>
                     </div>
 
