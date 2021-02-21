@@ -50,10 +50,11 @@ export class ProductsComponent implements OnInit {
 
       let minPrice = params['from'];
       console.log(minPrice);
+      if(minPrice)
       this.minValue = minPrice;
 
       let maxPrice = params['to'];
-      console.log(maxPrice);
+      if(maxPrice)
       this.maxValue = maxPrice;
 
       // this.handleQueryParams = 'merge';
