@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/interfaces/product';
 import { ProductService } from 'src/app/services/product.service';
+import { ProductCategoryService } from 'src/app/services/product-category.service';
+import { ProductCategory } from 'src/app/interfaces/product-category';
 declare const VendiGO: any;
 
 @Component({
@@ -15,15 +17,24 @@ export class SingleProductComponent implements OnInit {
   product: Product;
   productData: Product;
   productList: Array<Product>;
+  productCategoryList: Array<ProductCategory>;
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService) { }
+    private productService: ProductService,
+    public productCategoryService: ProductCategoryService) { }
+
+
 
   ngOnInit(): void {
     VendiGO.onReady();
     this.route.params.subscribe(params => this.getProductInfo(params.productId));
     this.getProductData();
+    this.getProductCategoryData();
+  }
+
+  getProductCategoryName(product: Product) {
+    return this.productCategoryList.filter((cat) => cat.id == parseInt(product.category))[0].name;
   }
 
   private async getProductInfo(productId: number): Promise<void> {
@@ -34,6 +45,16 @@ export class SingleProductComponent implements OnInit {
     this.productService.productData.subscribe(data => {
       this.productList = data;
     });
+  }
+
+  getCategory(): any {
+    return "2"
+  }
+
+  getProductCategoryData(): void {
+    this.productCategoryService.productCategoryData.subscribe(data => {
+      this.productCategoryList = data;
+    })
   }
 
   slideConfig = {

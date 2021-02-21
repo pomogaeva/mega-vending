@@ -52,7 +52,7 @@
               <div class="footer__item">
                 <nav class="footer__navigation" *ngIf="productCategoryList">
                   <ul *ngFor="let productCategory of productCategoryList">
-                    <li><a routerLink="products">{{productCategory.name}}</a></li>
+                    <li><a routerLink="products" [queryParams]="{cat: productCategory.id}">{{productCategory.name}}</a></li>
                   </ul>
                 </nav>
               </div>

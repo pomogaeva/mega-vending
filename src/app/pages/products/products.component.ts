@@ -17,7 +17,7 @@ export class ProductsComponent implements OnInit {
   imageUrl = `http://plushtoys-lb.com/megavending`;
   productData: Product;
   productList: Array<Product>;
-
+  loading:boolean = false;
   productCategoryData: ProductCategory;
   productCategoryList: Array<ProductCategory>;
 
@@ -41,17 +41,26 @@ export class ProductsComponent implements OnInit {
     public productService: ProductService,
     public productCategoryService: ProductCategoryService
   ) {
+
+    this.route.queryParams.subscribe(params => {
+      let cat = params['cat'];
+      console.log(cat);
+      this.category = cat;
+  });
+
   }
 
   ngOnInit(): void {
     VendiGO.onReady();
     this.getProductData();
     this.getProductCategoryData();
+    this.loading = true;
   }
 
   getProductData(): void {
     this.productService.productData.subscribe(data => {
       this.productList = data;
+      this.loading = false;
     });
   }
 
