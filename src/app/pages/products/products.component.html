@@ -76,6 +76,11 @@
             <!-- start goods -->
             <div class="goods">
               <div class="__inner">
+                <div class="row preloader" *ngIf="loading && !productList">
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="img/preloader.gif" alt="Preloader">
+                  </div>
+                </div>
                 <div class="row" *ngIf="productList">
                   <div class="col-12 col-sm-6 col-lg-4"
                     *ngFor="let product of productList | productCategory: category | price: minValue:maxValue | paginate: { itemsPerPage: 2, currentPage: p }">
