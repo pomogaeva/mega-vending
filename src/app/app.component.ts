@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigationStart, Router,Event} from '@angular/router';
+import { NavigationStart, Router, Event, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,20 +8,29 @@ import { NavigationStart, Router,Event} from '@angular/router';
 })
 export class AppComponent {
 
-  showHeader:boolean = true;
+  showHeader: boolean = true;
   constructor(private router: Router) {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {
         console.log('Nav started');
         console.log(event)
-        if(event.url.includes('home')) {
+        if (event.url.includes('home')) {
           this.showHeader = false;
         } else {
           this.showHeader = true;
         }
       }
+      if (event instanceof NavigationEnd) {
+        const currentComponent = (router as any).rootContexts.contexts
+          && (router as any).rootContexts.contexts.get('primary')
+          && (router as any).rootContexts.contexts.get('primary').outlet.component;
+        const componentName = currentComponent.constructor.name;
+        if (componentName === 'PageNotFoundComponent') {
+          this.showHeader = false;
+        }
+      }
     });
-}
+  }
 
   ngOnInit() {
 
