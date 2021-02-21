@@ -17,13 +17,14 @@ export class ProductsComponent implements OnInit {
   imageUrl = `http://plushtoys-lb.com/megavending`;
   productData: Product;
   productList: Array<Product>;
-  loading:boolean = false;
+  loading: boolean = false;
+  // handleQueryParams: string;
   productCategoryData: ProductCategory;
   productCategoryList: Array<ProductCategory>;
 
   category: string;
 
-  minValue: number = 1000;
+  minValue: number = 200;
   maxValue: number = 2000;
   options: Options = {
     floor: 0,
@@ -46,8 +47,18 @@ export class ProductsComponent implements OnInit {
       let cat = params['cat'];
       console.log(cat);
       this.category = cat;
-  });
 
+      // let minPrice = params['from'];
+      // console.log(minPrice);
+      // this.minValue = minPrice;
+
+      // let maxPrice = params['to'];
+      // console.log(maxPrice);
+      // this.maxValue = maxPrice;
+
+      // this.handleQueryParams = 'merge';
+
+    });
   }
 
   ngOnInit(): void {

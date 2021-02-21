@@ -134,8 +134,7 @@
                         alt="Product Category Photo" />
                     </figure>
 
-                    <h4><a routerLink="/products"
-                        [queryParams]="{productCategory:'category'}">{{productCategory.name}}</a>
+                    <h4><a routerLink="/products" [queryParams]="{cat: productCategory.id}">{{productCategory.name}}</a>
                     </h4>
                   </div>
                 </div>
