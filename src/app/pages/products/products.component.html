@@ -38,12 +38,13 @@
                     <div *ngIf="productCategoryList">
                       <ul class="list" *ngFor="let productCategory of productCategoryList">
                         <li class="list__item" routerLinkActive="active">
-                          <a class="list__item__link" routerLink="../products"
-                            [queryParams]="{cat: productCategory.id}">{{productCategory.name}}</a>
+                          <a class="list__item__link" routerLink="../products" [queryParams]="{cat: productCategory.id}"
+                            queryParamsHandling="merge">{{productCategory.name}}</a>
                         </li>
                       </ul>
                       <ul class="list">
-                        <li class="list__item"><a class="list__item__link" routerLink="../products">All categories</a>
+                        <li class="list__item"><a class="list__item__link" routerLink="../products"
+                            [queryParams]="{cat: ''}" queryParamsHandling="merge">All categories</a>
                         </li>
                       </ul>
                     </div>

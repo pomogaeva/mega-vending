@@ -7,15 +7,15 @@ import { Product } from '../interfaces/product';
 export class PricePipe implements PipeTransform {
 
   transform(value: Array<Product>, minValue: number, maxValue: number, product: Product): Array<Product> {
-    if ((!minValue || !maxValue) && !product) {
+    if ((minValue == undefined || maxValue == undefined) && !product) {
       return value;
     }
 
-    if (!minValue && product) {
+    if (minValue == undefined && product) {
       minValue = product.price;
     }
 
-    if (!maxValue && product) {
+    if (maxValue == undefined && product) {
       maxValue = product.price;
     }
 
