@@ -136,7 +136,7 @@
             (init)="slickInit($event)" (breakpoint)="breakpoint($event)" *ngIf="productList">
 
             <div ngxSlickItem class="__item" *ngFor="let similarProduct of productList | productCategory: '' :product">
-              <div *ngIf="product && similarProduct && similarProduct.id != product.id">
+              <div *ngIf="product && similarProduct && similarProduct.id != product.id" class="similar-prod-item">
                 <figure class="__image __image--shadow __image--bg-white">
                   <img [src]="imageUrl+'/'+similarProduct.image" alt="demo" />
 

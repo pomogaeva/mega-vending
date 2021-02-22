@@ -4209,7 +4209,7 @@ a.text-dark:hover {
   cursor: default
 }
 .slick-dots li.slick-active button:before {
-  top: 3px;
+  top: 0px;
   right: 3px;
   bottom: 3px;
   left: 3px;
@@ -5011,7 +5011,7 @@ label {
 .radiofield i:before {
   content: "";
   position: absolute;
-  top: 3px;
+  top: 0px;
   right: 3px;
   bottom: 3px;
   left: 3px;

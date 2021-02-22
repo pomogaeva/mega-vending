@@ -1,0 +1,13 @@
+.similar-prod-item {
+  margin-bottom: 30px;
+}
+
+ul.slick-dots li.slick-active button:before {
+  top: 0 !important;
+  background-color: #F95A3F;
+  color: #F95A3F;
+}
+
+.slick-arrow, button.slick-prev:before, button.slick-next:before {
+  color: #F95A3F !important;
+}
