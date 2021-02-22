@@ -61,7 +61,6 @@ export class HomeComponent implements OnInit {
     "autoplay": true,
     "arrows": false,
     "dots": true,
-    "appendDots": "#start-screen__slider-nav",
     "autoplaySpeed": 1200,
     "fade": true,
     "responsive": [
