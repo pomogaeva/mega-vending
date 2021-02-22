@@ -85,7 +85,7 @@
                 </div>
                 <div class="row" *ngIf="productList">
                   <div class="col-12 col-sm-6 col-lg-4"
-                    *ngFor="let product of productList | productCategory: category | price: minValue:maxValue | paginate: { itemsPerPage: 2, currentPage: p }">
+                    *ngFor="let product of productList | productCategory: category | price: minValue:maxValue | paginate: { itemsPerPage: 8, currentPage: p }">
                     <div class="__item">
                       <figure class="__image __image--shadow __image--bg-white">
                         <img [src]="imageUrl+'/'+product.image" alt="{{product.name}} photo" />

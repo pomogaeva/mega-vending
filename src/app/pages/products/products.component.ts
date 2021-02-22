@@ -25,10 +25,10 @@ export class ProductsComponent implements OnInit {
   category: string;
 
   minValue: number = 200;
-  maxValue: number = 2000;
+  maxValue: number = 3000;
   options: Options = {
     floor: 0,
-    ceil: 3000,
+    ceil: 5000,
     showTicks: true,
     tickStep: 500,
     draggableRange: true,
@@ -46,8 +46,8 @@ export class ProductsComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       let cat = params['cat'];
       console.log(cat);
-      if (cat == null)
-        this.category = cat;
+      // if (cat == null)
+      this.category = cat;
 
       let minPrice = params['from'];
       console.log(minPrice);
