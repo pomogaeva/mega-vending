@@ -56,7 +56,14 @@ export class HomeComponent implements OnInit {
   }
 
   slideConfig = {
-    "slidesToShow": 1, "slidesToScroll": 1, "autoplay": true, "autoplaySpeed": 1200, "fade": true,
+    "slidesToShow": 1,
+    "slidesToScroll": 1,
+    "autoplay": true,
+    "arrows": false,
+    "dots": true,
+    "appendDots": "#start-screen__slider-nav",
+    "autoplaySpeed": 1200,
+    "fade": true,
     "responsive": [
       {
         "breakpoint": 767,
