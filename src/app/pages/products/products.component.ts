@@ -46,7 +46,8 @@ export class ProductsComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       let cat = params['cat'];
       console.log(cat);
-      this.category = cat;
+      if (cat == null)
+        this.category = cat;
 
       let minPrice = params['from'];
       console.log(minPrice);

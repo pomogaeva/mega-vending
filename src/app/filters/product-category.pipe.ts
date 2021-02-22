@@ -7,10 +7,10 @@ import { Product } from '../interfaces/product';
 export class ProductCategoryPipe implements PipeTransform {
 
   transform(value: Array<Product>, category: string, product: Product): Array<Product> {
-    if (!category && !product) {
+    if ((!category || category == null) && !product) {
       return value;
     }
-    if (!category && product) {
+    if ((!category || category == null) && product) {
       category = product.category;
     }
     return value.filter((el: Product) => {

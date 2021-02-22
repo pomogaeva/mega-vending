@@ -61,7 +61,7 @@ export class SingleProductComponent implements OnInit {
     "autoplay": true,
     "dots": true,
     "speed": 1200,
-    "slidesToShow": 1,
+    "slidesToShow": 4,
     "slidesToScroll": 1,
     "responsive": [
       {
