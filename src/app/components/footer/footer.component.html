@@ -66,8 +66,8 @@
             <form class="footer__form-subscribe" (ngSubmit)="onSubmit()" [formGroup]="newSubscriptionsForm">
               <div class="input-wrp">
                 <i class="fontello-envelope"></i>
-                <input class="textfield" type="email" value="" ngModel [email]="true" placeholder="Email"
-                  formControlName="email" [ngClass]="{
+                <input class="textfield" type="email" ngModel [email]="true" placeholder="Email" formControlName="email"
+                  [ngClass]="{
                 'is-valid': emailControl.valid && isSubmit,
                 'is-invalid': emailControl.invalid}" />
                 <div class="invalid-feedback" *ngIf="emailControl.errors && emailControl.touched">
@@ -77,7 +77,7 @@
                 </div>
               </div>
 
-              <button class="custom-btn custom-btn--big custom-btn--s2 wide" type="submit"
+              <button *ngIf="!isSubmit" class="custom-btn custom-btn--big custom-btn--s2 wide footer-btn" type="submit"
                 role="button">Subscribe</button>
               <div *ngIf="isSubmit" class="form__note">Thank you for subscribing!</div>
             </form>

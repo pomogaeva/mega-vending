@@ -17271,6 +17271,7 @@ var trim = String.prototype.trim ?
 
 				$this.on('submit', function ()
 				{
+          return;
 					var $this = $(this),
 						str = $this.serialize(),
 						note = $this.find('.form__note');

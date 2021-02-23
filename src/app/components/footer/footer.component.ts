@@ -24,6 +24,7 @@ export class FooterComponent implements OnInit {
     public productCategoryService: ProductCategoryService) { }
 
   ngOnInit(): void {
+    console.log('footer here')
     this.createNewSubscriptionsForm();
     this.getProductCategoryData();
   }

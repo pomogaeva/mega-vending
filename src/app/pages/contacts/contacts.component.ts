@@ -77,7 +77,7 @@ export class ContactsComponent implements OnInit {
   }
 
   public save(newRequest: Request): void {
-
+    console.log('asd')
     this.http.post('http://plushtoys-lb.com/megavendingapi/api.php/requests', newRequest).subscribe(
       (response) => console.log(response),
       (error) => console.log(error)
