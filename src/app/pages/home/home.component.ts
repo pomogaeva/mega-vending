@@ -9,6 +9,7 @@ import { Gallery } from 'src/app/interfaces/gallery';
 import { GalleryService } from 'src/app/services/gallery.service';
 
 declare const VendiGO: any;
+declare const $: any;
 
 @Component({
   selector: 'app-home',
@@ -61,6 +62,7 @@ export class HomeComponent implements OnInit {
     "autoplay": true,
     "arrows": false,
     "dots": true,
+    "appendDots": "#start-screen__slider-nav",
     "autoplaySpeed": 1200,
     "fade": true,
     "responsive": [

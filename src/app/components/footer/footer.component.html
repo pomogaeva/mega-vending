@@ -66,11 +66,11 @@
             <form class="footer__form-subscribe" (ngSubmit)="onSubmit()" [formGroup]="newSubscriptionsForm">
               <div class="input-wrp">
                 <i class="fontello-envelope"></i>
-                <input class="textfield" type="email" ngModel [email]="true" placeholder="Email" formControlName="email"
-                  [ngClass]="{
+                <input class="textfield" type="email" ngModel [email]="true" placeholder="Email" name="email"
+                  formControlName="email" [ngClass]="{
                 'is-valid': emailControl.valid && isSubmit,
                 'is-invalid': emailControl.invalid}" />
-                <div class="invalid-feedback" *ngIf="emailControl.errors && emailControl.touched">
+                <div class="invalid--feedback" *ngIf="emailControl.errors && emailControl.touched">
                   <span *ngIf="emailControl.invalid">
                     Please enter a valid email.
                   </span>

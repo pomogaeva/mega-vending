@@ -60,6 +60,7 @@ export class SingleProductComponent implements OnInit {
   slideConfig = {
     "autoplay": true,
     "dots": true,
+    "arrows": false,
     "speed": 1200,
     "slidesToShow": 4,
     "slidesToScroll": 1,
