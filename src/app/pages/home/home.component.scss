@@ -7,3 +7,12 @@
     margin-top: 0;
   }
 }
+
+.about-img {
+  background: url('../../../img/about-us.png') center no-repeat;
+  background-size: contain;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
