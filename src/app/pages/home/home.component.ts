@@ -73,6 +73,12 @@ export class HomeComponent implements OnInit {
         }
       }
     ]
+    //   customPaging: function (slider, i) {
+    //     console.log(slider);
+    //     var slideNumber   = (i + 1),
+    //         totalSlides = slider.slideCount;
+    //     return '<a class="custom-dot" role="button" title="' + slideNumber + ' of ' + totalSlides + '"><span class="string">' + slideNumber + '</span></a>';
+    // }
   };
 
   slickInit(e) {
@@ -94,5 +100,4 @@ export class HomeComponent implements OnInit {
       this.galleryList = data;
     })
   }
-
 }
