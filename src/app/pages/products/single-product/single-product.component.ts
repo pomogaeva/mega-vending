@@ -24,8 +24,6 @@ export class SingleProductComponent implements OnInit {
     private productService: ProductService,
     public productCategoryService: ProductCategoryService) { }
 
-
-
   ngOnInit(): void {
     VendiGO.onReady();
     this.route.params.subscribe(params => this.getProductInfo(params.productId));

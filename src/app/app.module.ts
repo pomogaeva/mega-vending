@@ -25,6 +25,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { NgxMasonryModule } from 'ngx-masonry';
 import { IsotopeModule } from 'ngx-isotope';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { SimilarProdPipe } from './filters/similar-prod.pipe';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
     ProductCategoryPipe,
     PricePipe,
     TopBarComponent,
+    SimilarProdPipe,
   ],
   imports: [
     BrowserModule,
