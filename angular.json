@@ -28,15 +28,12 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/fonts",
-              "src/img",
-              "src/js"
+              "src/assets"
             ],
             "styles": [
               "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
-              "src/css/critical.min.css",
-              "src/css/style.min.css",
+              "src/assets/css/critical.min.css",
+              "src/assets/css/style.min.css",
               "src/styles.scss"
             ],
             "scripts": [
@@ -102,16 +99,14 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/fonts",
-              "src/img"
+              "src/assets"
             ],
             "styles": [
               "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "node_modules/slick-carousel/slick/slick.scss",
               "node_modules/slick-carousel/slick/slick-theme.scss",
-              "src/css/critical.min.css",
-              "src/css/style.min.css"
+              "src/assets/css/critical.min.css",
+              "src/assets/css/style.min.css"
             ],
             "scripts": [
               "./src/js/device.js",
