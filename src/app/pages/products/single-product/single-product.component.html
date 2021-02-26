@@ -124,42 +124,56 @@
     style="background-image: url(img/bg_6.jpg);">
     <div class="container">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 col-md">
 
           <div class="section-heading section-heading--left">
-            <h2 class="__title">Mega<span>Vending</span> Similar Products</h2>
+            <h5 class="__subtitle">Best match</h5>
+
+            <h2 class="__title">MegaVending Featured Products</h2>
           </div>
+        </div>
 
-          <div class="spacer py-6"></div>
+        <div class="col-12 col-lg-auto">
+          <div id="slick-dots--container-2" class="mt-10 text-right"></div>
+        </div>
+      </div>
 
-          <ngx-slick-carousel class="goods goods--slider" #slickModal="slick-carousel" [config]="slideConfig"
-            (init)="slickInit($event)" (breakpoint)="breakpoint($event)" *ngIf="productList">
+      <div class="spacer py-6"></div>
+    </div>
 
-            <div ngxSlickItem class="__item" *ngFor="let similarProduct of productList | productCategory: '' :product">
-              <div *ngIf="product && similarProduct && similarProduct.id != product.id" class="similar-prod-item">
-                <figure class="__image __image--shadow __image--bg-white">
-                  <img [src]="imageUrl+'/'+similarProduct.image" alt="demo" />
+    <div class="goods goods--slider">
+      <div class="slider-special-layout">
+        <div class="slider-special-layout__inner">
+          <div class="slider-special-layout__container">
+            <ngx-slick-carousel class="js-slick disable-not-active" #slickModal="slick-carousel" [config]="slideConfig"
+              (init)="slickInit($event)" (breakpoint)="breakpoint($event)" *ngIf="productList">
 
-                  <div class="__btn">
-                    <a class="custom-btn custom-btn--medium custom-btn--s3 wide"
-                      [routerLink]="'../../'+similarProduct.name+'/'+similarProduct.id">Show
-                      More</a>
+              <div ngxSlickItem class="__item"
+                *ngFor="let similarProduct of productList | productCategory: '' :product">
+                <div *ngIf="product && similarProduct && similarProduct.id != product.id" class="similar-prod-item">
+                  <figure class="__image __image--shadow __image--bg-white">
+                    <img [src]="imageUrl+'/'+similarProduct.image" alt="demo" />
+
+                    <div class="__btn">
+                      <a class="custom-btn custom-btn--medium custom-btn--s3 wide"
+                        [routerLink]="'../../'+similarProduct.name+'/'+similarProduct.id">Show
+                        More</a>
+                    </div>
+                  </figure>
+
+                  <div class="__content">
+                    <div class="product-price">
+                      <span class="product-price__item product-price__item--new">{{similarProduct.price}}$</span>
+                    </div>
+                    <h4 class="__title"><a
+                        [routerLink]="'../../'+similarProduct.name+'/'+similarProduct.id">{{similarProduct.name}}</a>
+                    </h4>
                   </div>
-                </figure>
-
-                <div class="__content">
-                  <div class="product-price">
-                    <span class="product-price__item product-price__item--new">{{similarProduct.price}}$</span>
-                  </div>
-                  <h4 class="__title"><a
-                      [routerLink]="'../../'+similarProduct.name+'/'+similarProduct.id">{{similarProduct.name}}</a>
-                  </h4>
                 </div>
               </div>
-            </div>
 
-          </ngx-slick-carousel>
-
+            </ngx-slick-carousel>
+          </div>
         </div>
       </div>
     </div>

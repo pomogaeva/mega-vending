@@ -60,6 +60,7 @@ export class SingleProductComponent implements OnInit {
   slideConfig = {
     "autoplay": true,
     "dots": true,
+    "appendDots": "#slick-dots--container-2",
     "arrows": false,
     "speed": 1200,
     "slidesToShow": 4,
