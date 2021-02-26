@@ -13,6 +13,7 @@ export class ContactsComponent implements OnInit {
   newRequestForm: FormGroup;
   isSubmit = false;
   request: Request;
+  phonePattern = "^((\\+-?)|0)?[0-9]{8,}$";
 
   constructor(private fb: FormBuilder, private http: HttpClient) { }
 

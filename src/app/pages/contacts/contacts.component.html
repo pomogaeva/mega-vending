@@ -178,9 +178,10 @@
 
               <div class="col-12 col-md-6">
                 <div class="input-wrp">
-                  <input class="textfield" placeholder="Phone" name="phone" type="tel" formControlName="phone" />
+                  <input class="textfield" placeholder="Phone" name="phone" [ngModel]="phone" [pattern]="phonePattern"
+                    type="tel" formControlName="phone" />
                   <div class="invalid-message" *ngIf="phoneControl.errors && phoneControl.touched">
-                    <span *ngIf="phoneControl.invalid && phoneControl.touched">
+                    <span *ngIf="phoneControl.errors.pattern && phoneControl.touched">
                       Please enter a valid phone number.
                     </span>
                   </div>
