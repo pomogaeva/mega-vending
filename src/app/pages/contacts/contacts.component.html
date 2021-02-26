@@ -149,9 +149,9 @@
                 <div class="input-wrp">
                   <input class="textfield" placeholder="Full name *" name="name" type="text" formControlName="fullName"
                     [ngClass]="{
-                    'is-valid': fullNameControl.valid && isSubmit,
-                    'is-invalid': fullNameControl.invalid}" />
-                  <div class="invalid-feedback" *ngIf="fullNameControl.errors && fullNameControl.touched">
+                    'valid': fullNameControl.valid && isSubmit,
+                    'invalid': fullNameControl.invalid && fullNameControl.touched}" />
+                  <div class="invalid-message" *ngIf="fullNameControl.errors && fullNameControl.touched">
                     <span *ngIf="fullNameControl.errors.required">
                       Please enter your name.
                     </span>
@@ -163,11 +163,14 @@
                 <div class="input-wrp">
                   <input class="textfield" placeholder="Email *" ngModel [email]="true" name="email" type="email"
                     formControlName="email" [ngClass]="{
-                    'is-valid': emailControl.valid && isSubmit,
-                    'is-invalid': emailControl.invalid}" />
-                  <div class="invalid-feedback" *ngIf="emailControl.errors && emailControl.touched">
-                    <span *ngIf="emailControl.invalid">
-                      Please enter a valid email.
+                    'valid': emailControl.valid && isSubmit,
+                    'invalid': emailControl.invalid && emailControl.touched}" />
+                  <div class="invalid-message" *ngIf="emailControl.errors && emailControl.touched">
+                    <span *ngIf="emailControl.errors.required">
+                      Please enter your email.
+                    </span>
+                    <span *ngIf="emailControl.invalid && !emailControl.errors.required">
+                      Invalid email. Please check your input.
                     </span>
                   </div>
                 </div>
@@ -176,8 +179,8 @@
               <div class="col-12 col-md-6">
                 <div class="input-wrp">
                   <input class="textfield" placeholder="Phone" name="phone" type="tel" formControlName="phone" />
-                  <div class="invalid-feedback" *ngIf="phoneControl.errors && phoneControl.touched">
-                    <span *ngIf="phoneControl.invalid">
+                  <div class="invalid-message" *ngIf="phoneControl.errors && phoneControl.touched">
+                    <span *ngIf="phoneControl.invalid && phoneControl.touched">
                       Please enter a valid phone number.
                     </span>
                   </div>
@@ -188,9 +191,9 @@
                 <div class="input-wrp">
                   <input class="textfield" placeholder="Subject *" name="subject" type="text" formControlName="subject"
                     [ngClass]="{
-                  'is-valid': subjectControl.valid && isSubmit,
-                  'is-invalid': subjectControl.invalid}" />
-                  <div class="invalid-feedback" *ngIf="subjectControl.errors && subjectControl.touched">
+                  'valid': subjectControl.valid && isSubmit,
+                  'invalid': subjectControl.invalid && subjectControl.touched}" />
+                  <div class="invalid-message" *ngIf="subjectControl.errors && subjectControl.touched">
                     <span *ngIf="subjectControl.errors.required">
                       Subject is a mandatory field.
                     </span>

@@ -10,3 +10,17 @@ img.logo {
   width: auto;
   min-width: 54px;
 }
+
+.valid {
+  border-color: #28a745;
+}
+
+.invalid {
+  border-color: #dc3545;
+}
+
+.invalid-message {
+  margin-top: .25rem;
+  font-size: 80%;
+  color: #dc3545;
+}

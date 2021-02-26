@@ -68,11 +68,14 @@
                 <i class="fontello-envelope"></i>
                 <input class="textfield" type="email" ngModel [email]="true" placeholder="Email" name="email"
                   formControlName="email" [ngClass]="{
-                'is-valid': emailControl.valid && isSubmit,
-                'is-invalid': emailControl.invalid}" />
-                <div class="invalid--feedback" *ngIf="emailControl.errors && emailControl.touched">
-                  <span *ngIf="emailControl.invalid">
-                    Please enter a valid email.
+                'valid': emailControl.valid && isSubmit,
+                'invalid': emailControl.invalid && emailControl.touched}" />
+                <div class="invalid-message" *ngIf="emailControl.errors && emailControl.touched">
+                  <span *ngIf="emailControl.errors.required">
+                    Please enter your email.
+                  </span>
+                  <span *ngIf="emailControl.invalid && !emailControl.errors.required">
+                    Invalid email. Please check your input.
                   </span>
                 </div>
               </div>
