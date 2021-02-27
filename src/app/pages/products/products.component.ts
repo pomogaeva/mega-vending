@@ -23,17 +23,24 @@ export class ProductsComponent implements OnInit {
   productCategoryList: Array<ProductCategory>;
 
   category: string;
-
   minValue: number = 200;
   maxValue: number = 3000;
   options: Options = {
     floor: 0,
     ceil: 5000,
     showTicks: true,
-    tickStep: 500,
+    tickStep: 1000,
+    getLegend: (value: number): string => {
+      return value.toString();
+    },
     draggableRange: true,
     translate: (value: number): string => {
       return '$' + value;
+    },
+    showSelectionBar: true,
+    selectionBarGradient: {
+      from: '#fff',
+      to: '#f95a3f'
     }
   };
 

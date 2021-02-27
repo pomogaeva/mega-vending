@@ -55,7 +55,7 @@
                   <div class="widget widget--price">
                     <h4 class="widget-title">Price</h4>
 
-                    <div>
+                    <div class="price-range-slider">
                       <ngx-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"
                         routerLink="../products" [queryParams]="{from: minValue, to: maxValue}"
                         queryParamsHandling="merge">
