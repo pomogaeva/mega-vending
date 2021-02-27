@@ -5,7 +5,8 @@
       class="slide start-screen__slide start-screen__slide--1 align-items-center"
       [class.text-center]="homeSlide.id == '1'">
 
-      <div class="__bg" [ngStyle]="{'background-image': 'url('+ imageUrl +'' + homeSlide.image + ')'}">
+      <div class="__bg" *ngIf="homeSlide"
+        [ngStyle]="{'background-image': 'url('+urlService.serverRelative(homeSlide.image)+')'}">
       </div>
 
       <div class="container">
@@ -142,7 +143,7 @@
                 <div class="col-6 col-md-4 col-lg-3" *ngFor="let productCategory of productCategoryList">
                   <div class="__item">
                     <figure class="__image">
-                      <img width="113" height="195" [src]="imageUrl+'/'+productCategory.image"
+                      <img width="113" height="195" [src]="urlService.serverRelative(productCategory.image)"
                         alt="Product Category Photo" />
                     </figure>
 
@@ -239,7 +240,7 @@
         }" -->
         <div class="__item" data-x="1" data-y="1">
           <figure class="__image">
-            <img [src]="imageUrl+'/'+gallery.image" alt="demo" />
+            <img [src]="urlService.serverRelative(gallery.image)" alt="demo" />
           </figure>
 
           <div class="__content">
@@ -249,7 +250,7 @@
               </div>
 
               <div class="col-auto">
-                <a class="__link" [href]="imageUrl+'/'+gallery.image" data-fancybox="gallery-masonry">
+                <a class="__link" [href]="urlService.serverRelative(gallery.image)" data-fancybox="gallery-masonry">
                   <i class="fontello-resize"></i>
                 </a>
               </div>

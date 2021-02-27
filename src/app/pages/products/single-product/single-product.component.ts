@@ -4,6 +4,7 @@ import { Product } from 'src/app/interfaces/product';
 import { ProductService } from 'src/app/services/product.service';
 import { ProductCategoryService } from 'src/app/services/product-category.service';
 import { ProductCategory } from 'src/app/interfaces/product-category';
+import { UrlService } from 'src/app/services/url.service';
 declare const VendiGO: any;
 
 @Component({
@@ -12,7 +13,6 @@ declare const VendiGO: any;
   styleUrls: ['./single-product.component.scss']
 })
 export class SingleProductComponent implements OnInit {
-  imageUrl = `http://plushtoys-lb.com/megavending`;
   productId: number;
   product: Product;
   productData: Product;
@@ -22,7 +22,8 @@ export class SingleProductComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
-    public productCategoryService: ProductCategoryService) { }
+    public productCategoryService: ProductCategoryService,
+    public urlService: UrlService) { }
 
   ngOnInit(): void {
     VendiGO.onReady();

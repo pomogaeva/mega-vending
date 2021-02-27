@@ -7,6 +7,7 @@ import { ProductCategoryService } from 'src/app/services/product-category.servic
 import { IsotopeOptions } from 'ngx-isotope';
 import { Gallery } from 'src/app/interfaces/gallery';
 import { GalleryService } from 'src/app/services/gallery.service';
+import { UrlService } from 'src/app/services/url.service';
 
 declare const VendiGO: any;
 declare const $: any;
@@ -25,7 +26,6 @@ export class HomeComponent implements OnInit {
     masonry: { "columnWidth": ".js-isotope__sizer" }
   };
 
-  imageUrl = `http://plushtoys-lb.com/megavending/`;
   homeSlideData: HomeSlide;
   homeSlidesList: Array<HomeSlide>;
 
@@ -39,7 +39,8 @@ export class HomeComponent implements OnInit {
     public homeSlidesService: HomeSlidesService,
     private route: ActivatedRoute,
     public productCategoryService: ProductCategoryService,
-    public galleryService: GalleryService
+    public galleryService: GalleryService,
+    public urlService: UrlService
   ) {
   }
 

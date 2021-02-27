@@ -17,7 +17,8 @@
                     <div class="js-slick">
 
                       <figure class="__img">
-                        <img [src]="imageUrl+'/'+product.image" width="222" alt="{{product.name}} photo" />
+                        <img [src]="urlService.serverRelative(product.image)" width="222"
+                          alt="{{product.name}} photo" />
                       </figure>
 
                     </div>
@@ -153,7 +154,7 @@
                 <div *ngIf="product && similarProduct && similarProduct.id != product.id" class="similar-prod-item">
 
                   <figure class="__image __image--shadow __image--bg-white">
-                    <img [src]="imageUrl+'/'+similarProduct.image" alt="demo" />
+                    <img [src]="urlService.serverRelative(similarProduct.image)" alt="demo" />
 
                     <div class="__btn">
                       <a class="custom-btn custom-btn--medium custom-btn--s3 wide"

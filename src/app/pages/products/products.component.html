@@ -88,7 +88,7 @@
                     *ngFor="let product of productList | productCategory: category | price: minValue:maxValue | paginate: { itemsPerPage: 9, currentPage: p }">
                     <div class="__item">
                       <figure class="__image __image--shadow __image--bg-white">
-                        <img [src]="imageUrl+'/'+product.image" alt="{{product.name}} photo" />
+                        <img [src]="urlService.serverRelative(product.image)" alt="{{product.name}} photo" />
 
                         <div class="__btn">
                           <a class="custom-btn custom-btn--medium custom-btn--s3 wide"
