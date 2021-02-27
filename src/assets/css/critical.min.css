@@ -68,6 +68,71 @@
 .ngx-slider-span.ngx-slider-tick-legend {
   top: 10px !important;
   font-size: 14px !important;
-  color: #dee4ec !important;
+  color: silver !important;
   background-color: transparent !important;
+}
+
+.ngx-pagination li {
+  margin: 5px !important;
+  min-width: 40px !important;
+  height: 40px !important;
+  padding: 0 !important;
+  line-height: 38px !important;
+  font-size: 1.6rem !important;
+  color: #333 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  border: 2px solid #dcdcdc !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  transition: background-color .3s ease-in-out,border-color .3s ease-in-out,color .3s ease-in-out !important;
+}
+
+.ngx-pagination a:hover {
+  border-color: #f95a3f !important;
+  color: #f95a3f !important;
+  background-color: transparent !important;
+}
+
+.ngx-pagination li:hover {
+  border-color: #f95a3f !important;
+}
+
+.ngx-pagination li.current {
+  background-color: #f95a3f !important;
+  border-color: #f95a3f !important;
+  color: white !important;
+}
+
+.ngx-pagination li:first-child,
+.ngx-pagination li:last-child {
+  border: none !important;
+}
+
+.ngx-pagination li a {
+  text-decoration: none !important;
+  padding: 0 !important;
+}
+
+.ngx-pagination li:first-child:hover a,
+.ngx-pagination li:last-child:hover a {
+  background-color: transparent !important;
+  cursor: pointer !important;
+  color: #f95a3f !important;
+}
+
+.ngx-pagination li:first-child {
+  margin-left: 0 !important;
+}
+
+.ngx-pagination li:last-child {
+  margin-right: 0 !important;
+}
+
+.ngx-pagination li.disabled,  .ngx-pagination li.disabled a {
+  color: #cacaca !important;
+}
+
+.ngx-pagination li.disabled a:hover {
+  cursor: default;
 }
