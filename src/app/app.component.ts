@@ -19,12 +19,13 @@ export class AppComponent {
         if (event.url.includes('about')) {
           setInterval(function () {
             $('.eapps-link').remove();
-          }, 100)
-        }
-        if (event.url.includes('home')) {
-          this.showHeader = false;
+          }, 500)
         } else {
-          this.showHeader = true;
+          if (event.url.includes('home')) {
+            this.showHeader = false;
+          } else {
+            this.showHeader = true;
+          }
         }
       }
       if (event instanceof NavigationEnd) {
