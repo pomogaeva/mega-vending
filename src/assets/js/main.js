@@ -17457,7 +17457,8 @@ var trim = String.prototype.trim ?
 	};
 }(jQuery));
 
-setInterval(function(){
-  // if the url contains about
-  $('.eapps-link').remove();
-},500)
+// setInterval(function(){
+  
+//   // if the url contains about
+//   $('.eapps-link').remove();
+// },500)

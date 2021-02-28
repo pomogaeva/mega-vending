@@ -15,7 +15,12 @@ export class AppComponent {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {
         console.log('Nav started');
-        console.log(event)
+        console.log(event);
+        if (event.url.includes('about')) {
+          setInterval(function () {
+            $('.eapps-link').remove();
+          }, 100)
+        }
         if (event.url.includes('home')) {
           this.showHeader = false;
         } else {
