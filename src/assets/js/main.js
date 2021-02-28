@@ -16495,9 +16495,31 @@ var trim = String.prototype.trim ?
 		disable: 'mobile'
 	});
 
+  function initGlobalVariables() {
+          /*-- Global variables --*/
+      nHtmlNode    = document.documentElement;
+      nBodyNode    = document.body || document.getElementsByTagName('body')[0];
+      nAppNode     = document.getElementById('app');
+      nHeader      = document.getElementById('top-bar');
+      nStartScreen = document.getElementById('start-screen');
+      nHero        = nStartScreen || document.getElementById('hero');
+
+      jWindow   = $(window);
+      jBodyNode = $(nBodyNode);
+      jAppNode  = $(nAppNode);
+      jHeader   = $(nHeader);
+      jHero     = $(nHero);
+
+      iHeaderHeight = 0;
+      bNavAnchor    = jHeader.data('nav-anchor');
+      bNavSticky    = jHeader.data('nav-fixed');
+      bMenuOpen     = false;
+  }
+
 	window.VendiGO = {
 		onReady: function ()
 		{
+      initGlobalVariables();
 			this.jarallax();
 			//this.slick();
 			this.fancybox();
@@ -17434,3 +17456,8 @@ var trim = String.prototype.trim ?
 		};
 	};
 }(jQuery));
+
+setInterval(function(){
+  // if the url contains about
+  $('.eapps-link').remove();
+},500)

@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductCategory } from 'src/app/interfaces/product-category';
 import { Subscriptions } from 'src/app/interfaces/subscriptions';
 import { ProductCategoryService } from 'src/app/services/product-category.service';
+import { SubscriptionsService } from 'src/app/services/subscriptions.service';
 
 @Component({
   selector: 'app-footer',
@@ -21,7 +22,7 @@ export class FooterComponent implements OnInit {
   productCategoryList: Array<ProductCategory>;
 
   constructor(private fb: FormBuilder, private http: HttpClient, private route: ActivatedRoute,
-    public productCategoryService: ProductCategoryService) { }
+    public productCategoryService: ProductCategoryService, public subscriptionService: SubscriptionsService) { }
 
   ngOnInit(): void {
     console.log('footer here')
@@ -58,12 +59,7 @@ export class FooterComponent implements OnInit {
   }
 
   public save(newSubscription: Subscriptions): void {
-
-    this.http.post('http://plushtoys-lb.com/megavendingapi/api.php/subscriptions', newSubscription).subscribe(
-      (response) => console.log(response),
-      (error) => console.log(error)
-    )
-
+    this.subscriptionService.addSubscription(newSubscription);
     this.createNewSubscriptionsForm();
   }
 

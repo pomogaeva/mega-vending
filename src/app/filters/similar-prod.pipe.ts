@@ -6,16 +6,15 @@ import { Product } from '../interfaces/product';
 })
 export class SimilarProdPipe implements PipeTransform {
 
-  transform(value: Array<Product>, product: Product): Array<Product> {
-    if (!product) {
+  transform(value: Array<Product>, category: string, product: Product): Array<Product> {
+    if (!category && !product) {
       return value;
     }
-    // if (!category && product) {
-    //   category = product.category;
-    // }
+    if (!category && product) {
+      category = product.category;
+    }
     return value.filter((el: Product) => {
-      // return (el.price >= minValue && el.price <= maxValue)
-      // return el.category.toLowerCase().indexOf(category.toLowerCase()) > -1;
+      return el.category.toLowerCase().indexOf(category.toLowerCase()) > -1 && el.id != product.id;
     });
   }
 }

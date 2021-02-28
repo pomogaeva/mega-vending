@@ -73,13 +73,16 @@ export class HomeComponent implements OnInit {
           "appendDots": "#start-screen__slider-nav"
         }
       }
-    ]
-    //   customPaging: function (slider, i) {
-    //     console.log(slider);
-    //     var slideNumber   = (i + 1),
-    //         totalSlides = slider.slideCount;
-    //     return '<a class="custom-dot" role="button" title="' + slideNumber + ' of ' + totalSlides + '"><span class="string">' + slideNumber + '</span></a>';
+    ],
+    // 'customPaging': function (slider, i) {
+    //   console.log(slider);
+    //   var slideNumber = (i + 1),
+    //     totalSlides = slider.slideCount;
+    //   return '<a class="custom-dot" role="button" title="' + slideNumber + ' of ' + totalSlides + '"><span class="string">' + slideNumber + '</span></a>';
     // }
+    customOnChange: function justChanged() {
+      alert('I have changed');
+    }
   };
 
   slickInit(e) {

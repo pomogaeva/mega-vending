@@ -1,4 +1,4 @@
-<header id="top-bar" class="top-bar top-bar--s2" [ngClass]="{'is-expanded': !isCollapsed}">
+<header id="top-bar" class="top-bar top-bar--s2">
 
   <div class="top-bar__line-menu compensate-for-scrollbar">
 
@@ -6,8 +6,7 @@
       <img class="img-fluid logo" src="assets/img/logo-black1.svg" alt="Mega Vending logo" />
     </a>
 
-    <a id="top-bar__navigation-toggler" class="top-bar__navigation-toggler navbar-toggler"
-      (click)="isCollapsed = !isCollapsed" [ngClass]="{'is-active': !isCollapsed}">
+    <a id="top-bar__navigation-toggler" class="top-bar__navigation-toggler navbar-toggler">
       <span></span>
     </a>
 

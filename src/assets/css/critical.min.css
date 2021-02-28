@@ -136,3 +136,7 @@
 .ngx-pagination li.disabled a:hover {
   cursor: default;
 }
+
+.eapps-link {
+  display: none !important;
+}
