@@ -21,6 +21,14 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
   <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+  <script type="text/javascript">
+    var _html = document.documentElement,
+      isTouch = (('ontouchstart' in _html) || (navigator.msMaxTouchPoints > 0) || (navigator.maxTouchPoints));
+
+    _html.className = _html.className.replace("no-js", "js");
+    _html.classList.add(isTouch ? "touch" : "no-touch");
+  </script>
+  <script type="text/javascript" src="assets/js/device.js"></script>
 
 </head>
 
@@ -30,6 +38,16 @@
   <div id="btn-to-top-wrap" class="compensate-for-scrollbar">
     <a id="btn-to-top" class="circled" href="#" data-visible-offset="800"></a>
   </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/js/jquery-2.2.4.min.js"><\/script>')</script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="assets/js/main.js"></script>
+
 
 </body>
 
