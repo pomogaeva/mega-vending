@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Request } from 'src/app/interfaces/request';
 import { HttpClient } from '@angular/common/http';
+import { RequestService } from 'src/app/services/request.service';
 declare const VendiGO: any;
 
 @Component({
@@ -15,7 +16,7 @@ export class ContactsComponent implements OnInit {
   request: Request;
   phonePattern = "^((\\+-?)|0)?[0-9]{8,}$";
 
-  constructor(private fb: FormBuilder, private http: HttpClient) { }
+  constructor(private fb: FormBuilder, private http: HttpClient, public requestService: RequestService) { }
 
   ngOnInit(): void {
     VendiGO.onReady();

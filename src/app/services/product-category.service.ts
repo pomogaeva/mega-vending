@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { ProductCategory } from '../interfaces/product-category';
 
 @Injectable({
@@ -9,7 +10,7 @@ import { ProductCategory } from '../interfaces/product-category';
 export class ProductCategoryService {
   productCategoryData = new BehaviorSubject<Array<ProductCategory>>(null);
 
-  private url = `http://plushtoys-lb.com/megavendingapi/api.php/product_categories`;
+  private url = `${environment.url}/product_categories`;
 
   constructor(private http: HttpClient) {
     this.getProductCategoryData();

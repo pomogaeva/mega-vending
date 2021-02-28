@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Product } from '../interfaces/product';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class ProductService {
 
   productData = new BehaviorSubject<Array<Product>>(null);
 
-  private url = `http://plushtoys-lb.com/megavendingapi/api.php/products`;
+  private url = `${environment.url}/products`;
 
   constructor(private http: HttpClient) {
     this.getProductData();

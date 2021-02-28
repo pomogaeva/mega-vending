@@ -11,7 +11,7 @@ export class RequestService {
 
   requestData = new BehaviorSubject<Array<Request>>(null);
 
-  private url = `${environment.url}requests`;
+  public url = `${environment.url}/requests`;
 
   constructor(private http: HttpClient) {
     this.getRequestData();

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Gallery } from '../interfaces/gallery';
 
 @Injectable({
@@ -10,7 +11,7 @@ export class GalleryService {
 
   galleryData = new BehaviorSubject<Array<Gallery>>(null);
 
-  private url = `http://plushtoys-lb.com/megavendingapi/api.php/gallery`;
+  private url = `${environment.url}/gallery`;
 
   constructor(private http: HttpClient) {
     this.getGalleryData();

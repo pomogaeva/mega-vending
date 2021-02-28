@@ -12,7 +12,7 @@ export class SubscriptionsService {
 
   subscriptionData = new BehaviorSubject<Array<Subscriptions>>(null);
 
-  public url = `${environment.url}subscriptions`;
+  public url = `${environment.url}/subscriptions`;
 
   constructor(public http: HttpClient) {
     this.getSubscriptionData();

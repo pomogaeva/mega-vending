@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { HomeSlide } from '../interfaces/home-slide';
 
 @Injectable({
@@ -9,8 +10,7 @@ import { HomeSlide } from '../interfaces/home-slide';
 export class HomeSlidesService {
 
   homeSlideData = new BehaviorSubject<Array<HomeSlide>>(null);
-
-  private url = `http://plushtoys-lb.com/megavendingapi/api.php/home_slides`;
+  private url = `${environment.url}/home_slides`;
 
   constructor(private http: HttpClient) {
     this.getHomeSlidesData();
